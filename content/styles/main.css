@@ -1,0 +1,353 @@
+@import url(common.css);
+
+
+/*===================================
+헤더
+===================================*/
+header.main:not(.fixed) h1 a {
+	color: #fff;
+}
+
+body.mobile-menu-opened header.main:not(.fixed) h1 a {
+	color: #000;
+}
+
+header.main:not(.fixed) .gnb > li > a {
+	color: #fff;
+}
+
+header.main:not(.fixed) .gnb > li > a + ul li a {
+	color: #fff;
+}
+
+header.main:not(.fixed) .bg-snb {
+	background-color: transparent;
+}
+
+header.main:not(.fixed) .mobile-menu span {
+	background-color: #fff;
+}
+
+header.main:not(.fixed) .mobile-menu:before,
+header.main:not(.fixed) .mobile-menu:after {
+	background-color: #fff;
+}
+
+
+/*===================================
+메인(비주얼)
+===================================*/
+.main-visual {
+	position: relative;
+	margin-top: -70px;
+}
+
+.main-visual .video-block {
+	position: relative;
+	z-index: -1;
+	padding-bottom: 56.25%;
+}
+
+.main-visual .video-block video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.main-visual .grid {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	transform: translateX(-50%);
+}
+
+.main-visual .grid > img {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	max-width: 100%;
+	transform: translateY(-50%);
+}
+
+.main-visual .grid > .btn {
+	position: absolute;
+	bottom: -1.35rem;
+	left: 50%;
+	width: 8.9rem;
+	padding-right: 0;
+	padding-left: 0;
+	border: none;
+	background-color: #6abba2;
+	font-size: 0.9rem;
+	font-weight: 700;
+	color: #fff;
+	transform: translateX(-50%);
+}
+
+
+/*===================================
+메인(개요)
+===================================*/
+.overview-top {
+	padding: 8rem 0 4rem;
+	background: url(../images/10th/bg-section-overview-top.png) no-repeat center bottom;
+}
+
+.overview-top .video-link {
+	position: relative;
+	background: url(../images/10th/bg-main-movie.png) no-repeat;
+	padding: 4rem 0 4.5rem 43rem;
+	color: #fff;
+	box-shadow: 0 12px 40px 14px rgba(0, 0, 0, 0.25);
+}
+
+.overview-top .video-link .ico {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.overview-top .video-link h2 {
+	font-size: 1.7rem;
+}
+
+.overview-top .video-link p {
+	margin: 0.8rem 0 3.25rem;
+	font-size: 0.8rem;
+	line-height: 1.75;
+}
+
+.overview-top .video-link .btn {
+	color: #fff;
+}
+
+.overview-btm {
+	padding: 3.1rem 0 9.3rem;
+	background-color: #e4ece9;
+	text-align: center;
+}
+
+.overview-btm .grid > p {
+	margin-bottom: 3.25rem;
+	font-size: 1.7rem;
+	font-weight: 300;
+	line-height: 1.3;
+}
+
+.overview-btm .grid > p strong {
+	font-weight: 500;
+}
+
+.overview-btm .process {
+	margin-top: 5.7rem;
+}
+
+.overview-btm .process img {
+	max-width: 100%;
+}
+
+.overview-btm .process ul {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.85rem;
+	padding: 0 2rem;
+}
+
+.overview-btm .process ul li {
+	flex: 1;
+}
+
+.overview-btm .process ul li h3 {
+	position: relative;
+	padding-bottom: 0.8rem;
+	font-size: 1.2rem;
+	color: #183d31;
+}
+
+.overview-btm .process ul li h3:after {
+	display: block;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 1.2rem;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.3);
+	content: "";
+	transform: translateX(-50%);
+}
+
+.overview-btm .process ul li p {
+	margin-top: 1.15rem;
+	font-size: 0.9rem;
+	line-height: 1.55;
+}
+
+
+/*===================================
+메인(혜택)
+===================================*/
+.benefit {
+	padding: 7.5rem 0 6rem;
+	background: url(../images/10th/bg-section-benefit.png) no-repeat center top;
+	font-size: 0;
+}
+
+.benefit .bnf-top {
+	display: flex;
+	align-items: flex-end;
+}
+
+.benefit .bnf-top h2 {
+	padding-left: 2.5rem;
+	border-left: 3px solid #6abba2;
+	font-family: "Noto Serif KR", sans-serif;
+	font-size: 2.1rem;
+	font-weight: 600;
+	color: #fef8ec;
+	line-height: 1.24;
+}
+
+.benefit .bnf-top h2 em {
+	display: block;
+	margin-bottom: 0.35rem;
+	font-size: 3.6rem;
+	font-weight: 700;
+}
+
+.benefit .bnf-top p {
+	position: relative;
+	margin-left: 2.5rem;
+	padding-left: 6.5rem;
+	font-size: 1rem;
+	color: #fff;
+	line-height: 1.5;
+}
+
+.benefit .bnf-top p:before {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 4rem;
+	height: 1px;
+	background-color: rgba(217, 224, 221, 0.6);
+	content: "";
+}
+
+.benefit .bnf-btm {
+	margin-top: 4rem;
+	padding: 3.5rem 3.7rem 2.6rem;
+	background-color: #f9f9f9;
+	text-align: center;
+}
+
+.benefit .bnf-btm > p {
+	margin: -0.3rem 0 0.9rem;
+	font-weight: 1.2rem;
+	font-weight: 500;
+	color: #183d31;
+}
+
+.benefit .bnf-btm ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.benefit .bnf-btm ul li {
+	width: 13.6rem;
+	margin: 0.9rem;
+	padding: 1.45rem 0 1.25rem;
+	border-radius: 0.9rem;
+	border: 1px solid #deeae6;
+	background-color: #e4ece9;
+	/*box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.06);*/
+}
+
+.benefit .bnf-btm ul li .num {
+	display: block;
+	width: 1.8rem;
+	height: 1.8rem;
+	margin: 0 auto;
+	border-radius: 100%;
+	border: 1px solid #173b2f;
+	font-family: "Montserrat", sans-serif;
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: #173b2f;
+	line-height: 1.7rem;
+}
+
+.benefit .bnf-btm ul li p {
+	margin-top: 0.7rem;
+	font-size: 0.9rem;
+	font-weight: 500;
+	line-height: 1.55;
+}
+
+.benefit .bnf-btm ul li:hover {
+	background-color: #6abba2;
+}
+
+.benefit .bnf-btm ul li:hover .num {
+	border-color: #183d31;
+	background-color: #183d31;
+	color: #fff;
+}
+
+.benefit .bnf-btm ul li:hover p {
+	color: #fff;
+}
+
+.benefit .btn {
+	margin: 0 auto;
+	color: #fff;
+}
+
+
+/*===================================
+메인(멘토)
+===================================*/
+.mentor {
+	padding: 6rem 0 7.5rem;
+	background-color: #fef8ec;
+	text-align: center;
+}
+
+.mentor h2 {
+	margin: -0.55rem 0 3.65rem;
+	font-size: 1.6rem;
+	font-weight: 300;
+}
+
+.mentor h2 strong {
+	display: block;
+	font-size: 1.8rem;
+}
+
+.mentor ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: -0.15rem;
+}
+
+.mentor ul li > span {
+	display: block;
+}
+
+.mentor ul li .mnt-name {
+	margin: 0.35rem 0 0.05rem;
+	font-size: 0.9rem;
+	font-weight: 500;
+	color: #183d31;
+}
+
+.mentor ul li .mnt-profile {
+	font-size: 0.8rem;
+}
