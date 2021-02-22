@@ -35,6 +35,10 @@ ol {
 	padding: 0 0 0 1.1rem;
 }
 
+dd {
+	margin: 0;
+}
+
 a {
 	color: #000;
 	text-decoration: none;
@@ -279,6 +283,64 @@ textarea {
 
 
 /*===================================
+페이지네이션
+===================================*/
+.pagination {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 4rem;
+}
+
+.pagination li a {
+	display: block;
+	min-width: 1.95rem;
+	height: 1.95rem;
+	margin: 0 0.225rem;
+	padding: 0 0.65rem;
+	border-radius: 100%;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	font-size: 0.9rem;
+	line-height: 1.95rem;
+	text-align: center;
+}
+
+.pagination li a.current {
+	background-color: #183d31;
+	font-weight: 700;
+	color: #fff;
+}
+
+.pagination li a.move {
+	border: 1px solid rgba(182, 211, 202, 0.75);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	font-size: 0;
+}
+
+.pagination li a.move.first {
+	margin-left: 0;
+	background-image: url(../images/10th/ico-page-first.png);
+}
+
+.pagination li a.move.prev {
+	margin-right: 4.125rem;
+	background-image: url(../images/10th/ico-page-prev.png);
+}
+
+.pagination li a.move.next {
+	margin-left: 4.125rem;
+	background-image: url(../images/10th/ico-page-next.png);
+}
+
+.pagination li a.move.last {
+	margin-right: 0;
+	background-image: url(../images/10th/ico-page-last.png);
+}
+
+
+/*===================================
 헤더
 ===================================*/
 header {
@@ -301,10 +363,16 @@ header .grid {
 }
 
 header h1 {
-	display: flex;
-	align-items: center;
+	width: 10.35rem;
 	height: 3.5rem;
-	font-size: 1rem;
+	background: url(../images/10th/bi.png) no-repeat left center;
+	background-size: 100% auto;
+	font-size: 0;
+}
+
+header h1 a {
+	display: block;
+	height: 100%;
 }
 
 header .gnb {
@@ -367,16 +435,17 @@ header .gnb .snb.s4 {
 
 header .gnb .snb li {
 	flex: none;
+	padding-top: 0.7rem;
 }
 
 header .gnb .snb li a {
 	display: block;
-	height: 4.9rem;
+	height: 3.5rem;
 	padding: 0 1.6rem;
 	font-size: 0.9rem;
 	font-weight: 700;
 	color: #000;
-	line-height: 4.9rem;
+	line-height: 3.5rem;
 }
 
 header .gnb .snb li a:hover {
@@ -397,14 +466,14 @@ header .mobile-menu {
 	align-items: center;
 	position: absolute;
 	top: 10px;
-	right: 15px;
+	right: 10px;
 	width: 40px;
 	height: 40px;
 	outline: none;
 }
 
 header .mobile-menu span {
-	width: 30px;
+	width: 20px;
 	height: 2px;
 	background-color: #000;
 	text-indent: -999em;
@@ -414,19 +483,19 @@ header .mobile-menu:before,
 header .mobile-menu:after {
 	position: absolute;
 	top: 50%;
-	left: 5px;
-	width: 30px;
+	left: 10px;
+	width: 20px;
 	height: 2px;
 	background-color: #000;
 	content: "";
 }
 
 header .mobile-menu:before {
-	margin-top: -8px;
+	margin-top: -7px;
 }
 
 header .mobile-menu:after {
-	margin-top: 6px;
+	margin-top: 5px;
 }
 
 header .menu-close {
@@ -435,15 +504,15 @@ header .menu-close {
 	align-items: center;
 	position: absolute;
 	top: 10px;
-	right: 15px;
+	right: 10px;
 	width: 40px;
 	height: 40px;
 	outline: none;
-	background-color: #fff;
+	background-color: #f8f8f8;
 }
 
 header .menu-close span {
-	width: 30px;
+	width: 24px;
 	height: 2px;
 	background-color: #000;
 	text-indent: -999em;
@@ -453,8 +522,8 @@ header .menu-close span {
 header .menu-close:after {
 	position: absolute;
 	top: 50%;
-	left: 5px;
-	width: 30px;
+	left: 8px;
+	width: 24px;
 	height: 2px;
 	margin-top: -1px;
 	background-color: #000;
@@ -518,7 +587,7 @@ body.mobile-menu-opened header .menu-close {
 .ft-top .sns li i {
 	display: block;
 	width: 1.4rem;
-	height: 1.3rem;
+	height: 1.4rem;
 	margin: 0 auto 0.35rem;
 	background: url(../images/10th/ico-sp-sns.png) no-repeat;
 	background-size: auto 100%;
@@ -529,11 +598,53 @@ body.mobile-menu-opened header .menu-close {
 }
 
 .ft-top .sns li.blog i {
-	background-position: -2.4rem 0; 
+	background-position: -2.4rem 0;
 }
 
 .ft-top .sns li.youtube i {
-	background-position: -4.8rem 0; 
+	background-position: -4.8rem 0;
+}
+
+.ft-top.v1 {
+	padding: 2rem 0;
+}
+
+.ft-top.v1 .sponsor {
+	margin-top: 0;
+}
+
+.ft-top.v1 .sponsor li:last-child {
+	margin-left: 1.5rem;
+}
+
+.ft-top.v1 .sns li.asan {
+	margin-right: 2rem;
+}
+
+.ft-top.v1 .sns li.asan a {
+	font-family: "Noto Sans KR", sans-serif;
+	font-size: 0.5rem;
+}
+
+.ft-top.v1 .sns li.asan i {
+	background-position: -7.2rem 0;
+}
+
+.ft-top.v1 .sns li.subscribe {
+	margin-left: 2rem;
+}
+
+.ft-top.v1 .sns li.subscribe .btn {
+	width: 7rem;
+	height: 2rem;
+	padding: 0;
+	border-radius: 0;
+	border: none;
+	background-color: #727983;
+	font-size: 0.7rem;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.6);
+	line-height: 1.95rem;
 }
 
 .ft-mdl {
@@ -610,8 +721,12 @@ body.mobile-menu-opened header .menu-close {
 
 .ft-btm .bi {
 	flex: none;
-	width: 8.6rem;
-	margin-right: 2.4rem;
+	width: 13.86rem;
+	height: 1.55rem;
+	background: url(../images/10th/bi.png) no-repeat;
+	background-size: 100% auto;
+	margin-right: 1.5rem;
+	font-size: 0;
 }
 
 .ft-btm .contact {
@@ -694,7 +809,7 @@ body.mobile-menu-opened header .menu-close {
 	.m-show {
 		display: none;
 	}
-	
+
 	.linebreak1420over {
 		display: block;
 	}
@@ -731,6 +846,10 @@ body.mobile-menu-opened header .menu-close {
 	/*===================================
 	헤더
 	===================================*/
+	body.mobile-menu-opened header {
+		border-bottom: none;
+	}
+
 	body.mobile-menu-opened header .grid {
 		flex-direction: column;
 		margin: 0;
@@ -738,7 +857,11 @@ body.mobile-menu-opened header .menu-close {
 	}
 
 	header h1 {
+		width: 175px;
 		height: 60px;
+	}
+
+	body.mobile-menu-opened header h1 {
 		margin-left: 20px;
 	}
 
@@ -795,6 +918,7 @@ body.mobile-menu-opened header .menu-close {
 	}
 
 	header .gnb .snb li {
+		padding-top: 0;
 		border-bottom: 1px solid rgba(248, 248, 248, 0.1);
 	}
 
@@ -822,12 +946,17 @@ body.mobile-menu-opened header .menu-close {
 	}
 }
 
-@media all and (max-width: 971px) {
+@media all and (max-width: 1069px) {
 	/*===================================
 	풋터
 	===================================*/
-	.ft-btm .bi {
-		display: none;
+	.ft-btm .grid {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.ft-btm .contact {
+		margin: 1.5rem 0 1rem;
 	}
 }
 
@@ -840,7 +969,60 @@ body.mobile-menu-opened header .menu-close {
 	}
 }
 
-@media all and (max-width: 682px) {
+@media all and (max-width: 651px) {
+	/*===================================
+	풋터
+	===================================*/
+	.ft-top .sponsor {
+		display: none;
+	}
+
+	.ft-top .sns li.blog {
+		margin: 0 20px;
+	}
+
+	.ft-top.v1 .sns {
+		flex: 1;
+		justify-content: space-between;
+	}
+
+	.ft-top.v1 .sns li.asan {
+		margin-right: 20px;
+	}
+
+	.ft-top.v1 .sns li.subscribe {
+		flex: 1;
+		text-align: right;
+	}
+
+	.ft-top.v1 .sns li.subscribe .btn {
+		display: inline-block;
+	}
+}
+
+@media all and (max-width: 548px) {
+	/*===================================
+	페이지네이션
+	===================================*/
+	.pagination li a.move.prev {
+		margin-right: 12px;
+	}
+
+	.pagination li a.move.next {
+		margin-left: 12px;
+	}
+}
+
+@media all and (max-width: 518px) {
+	/*===================================
+	풋터
+	===================================*/
+	.ft-btm .privacy-policy {
+		margin-bottom: 1rem;
+	}
+}
+
+@media all and (max-width: 509px) {
 	/*===================================
 	풋터
 	===================================*/
@@ -858,24 +1040,38 @@ body.mobile-menu-opened header .menu-close {
 	}
 }
 
-@media all and (max-width: 518px) {
-	/*===================================
-	풋터
-	===================================*/
-	.ft-btm .grid {
-		flex-direction: column-reverse;
-	}
-
-	.ft-btm .privacy-policy {
-		margin-bottom: 1rem;
-	}
-}
-
 @media all and (max-width: 414px) {
 	/*===================================
 	공통
 	===================================*/
 	html {
 		font-size: 14px;
+	}
+
+	/*===================================
+	풋터
+	===================================*/
+	.ft-top .sns li a {
+		font-size: 0;
+	}
+
+	.ft-top .sns li:not(.subscribe) a {
+		margin-top: 4px;
+	}
+
+	.ft-top.v1 .sns li.asan a {
+		font-size: 0;
+	}
+
+	.ft-btm {
+		padding: 2rem 0;
+	}
+
+	.ft-btm .bi {
+		display: none;
+	}
+
+	.ft-btm .contact {
+		margin-top: 0;
 	}
 }

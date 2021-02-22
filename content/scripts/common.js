@@ -28,7 +28,8 @@ $(function(){
     $(".bg-snb").mouseleave(function(){
         $(".bg-snb").animate({ "height": "0" }, 100);
         $(".snb.s1").css("display", "none");
-        $(".snb.s2").css("display", "none");
+        $(".snb.s3").css("display", "none");
+        $(".snb.s4").css("display", "none");
     });
 
 	//return false;
@@ -76,8 +77,7 @@ $(window).resize(function(){
 			    $(".gnb").show();
 			    $(".bg-snb").animate({ "height": "0" }, 0);
 			    $(".snb.s1").css("display", "none");
-			    $(".snb.s3").css("display", "none");
-			    $(".snb.s4").css("display", "none");
+			    $(".snb.s2").css("display", "none");
 			}
 		} else {
 		    if ($("#lay1").css("display") == "none") {
@@ -179,19 +179,16 @@ $(document).ready(function(){
 		}
 	});
 
-});
+	// 공지사항 동영상 콘텐츠 리사이징
+	$(".ntc-view .atc-cont iframe").parent("div").css("position", "relative");
+	$(".ntc-view .atc-cont iframe").parent("div").css("padding-bottom", "56.25%");
 
-
-$(function(){
-    $("#faqContents .panel").hide();
-    $("#faqContents .panel:eq(0)").show();
-    $("#faqContents .tab > li:eq(0) > a").addClass("selected");
-
-    $("#faqContents .tab > li > a").bind("click focusin", function(){
-        $("#faqContents .panel").hide();
-        $($(this).attr("href")).show();
-        $("#faqContents .tab > li > a").removeClass("selected");
-        $(this).addClass("selected");
-        return false;
-    });
+	// FAQ
+	$("#faq").tabs();
+	$(".tab-cont").accordion({
+		animate: 100,
+		heightStyle: "content",
+		collapsible: true,
+		active: false
+	});
 });
