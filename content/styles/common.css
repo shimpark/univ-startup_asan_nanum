@@ -246,11 +246,15 @@ textarea {
 }
 
 .btn-wrap .btn {
-	margin-left: 0.5rem;
+	margin: 0.25rem;
 }
 
 .btn-wrap .btn:first-child {
 	margin-left: 0;
+}
+
+.btn-wrap .btn:last-child {
+	margin-right: 0;
 }
 
 
@@ -796,6 +800,50 @@ body.mobile-menu-opened header .menu-close {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lay{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left:0;
+	z-index: 2;
+	min-width: 280px;
+	max-width: 670px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.lay-top {
+	position: relative;
+}
+
+.lay-top .lay-close {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -2rem;
+	width: 2rem;
+	height: 2rem;
+	padding: 0.95rem 0.25rem 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 0;
+}
+
+.lay-top .lay-close span {
+	display: block;
+	width: 1.5rem;
+	height: 1px;
+	background-color: #000;
+}
+
+.lay-top .lay-close span:first-child {
+	transform: rotate(45deg);
+}
+
+.lay-top .lay-close span:last-child {
+	margin-top: -1px;
+	transform: rotate(-45deg);
 }
 
 

@@ -76,6 +76,7 @@ header.main:not(.fixed) .mobile-menu:after {
 	left: 50%;
 	width: 100%;
 	height: 100%;
+	margin: 0;
 	transform: translateX(-50%);
 }
 
@@ -114,16 +115,23 @@ header.main:not(.fixed) .mobile-menu:after {
 .overview-top .video-link {
 	position: relative;
 	background: url(../images/10th/bg-main-movie.png) no-repeat;
-	padding: 4rem 0 4.5rem 43rem;
+	padding: 4rem 2rem 4.5rem 62.3188405%;
 	color: #fff;
 	box-shadow: 0 12px 40px 14px rgba(0, 0, 0, 0.25);
 }
 
 .overview-top .video-link .ico {
+	display: block;
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	width: 3.35rem;
+	height: 3.35rem;
 	transform: translate(-50%, -50%);
+}
+
+.overview-top .video-link .ico img {
+	max-width: 100%;
 }
 
 .overview-top .video-link h2 {
@@ -213,6 +221,7 @@ header.main:not(.fixed) .mobile-menu:after {
 
 .benefit .bnf-top {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: flex-end;
 }
 
@@ -235,7 +244,7 @@ header.main:not(.fixed) .mobile-menu:after {
 
 .benefit .bnf-top p {
 	position: relative;
-	margin-left: 2.5rem;
+	margin: 1rem 0 0 2.5rem;
 	padding-left: 6.5rem;
 	font-size: 1rem;
 	color: #fff;
@@ -270,11 +279,13 @@ header.main:not(.fixed) .mobile-menu:after {
 .benefit .bnf-btm ul {
 	display: flex;
 	flex-wrap: wrap;
+	/*
 	justify-content: space-between;
+	*/
 }
 
 .benefit .bnf-btm ul li {
-	width: 13.6rem;
+	width: /*13.6rem*/calc(25% - 1.8rem);
 	margin: 0.9rem;
 	padding: 1.45rem 0 1.25rem;
 	border-radius: 0.9rem;
@@ -377,6 +388,67 @@ header.main:not(.fixed) .mobile-menu:after {
 	body.mobile-menu-opened header.main:not(.fixed) h1 {
 		background-image: url(../images/10th/bi.png);
 	}
+
+
+	/*===================================
+	메인(개요)
+	===================================*/
+	.overview-top .video-link {
+		background-size: auto 100%;
+	}
+
+
+	/*===================================
+	메인(혜택)
+	===================================*/
+	.benefit {
+		background-size: auto 100%;
+	}
+}
+
+@media all and (max-width: 935px) {
+	/*===================================
+	메인(혜택)
+	===================================*/
+	.benefit .bnf-btm {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.benefit .bnf-btm ul li {
+		width: calc(33.3333333% - 20px);
+		margin: 10px;
+	}
+}
+
+@media all and (max-width: 767px) {
+	/*===================================
+	메인(개요)
+	===================================*/
+	.overview-top .video-link {
+		padding: 4rem 2rem;
+		background-position-x: 25%;
+		text-align: center;
+	}
+
+	.overview-top .video-link .ico {
+		position: static;
+		margin: 0 auto 2rem;
+		transform: none;
+	}
+
+	.overview-top .video-link p {
+		margin-bottom: 1rem;
+	}
+}
+
+@media all and (max-width: 643px) {
+	/*===================================
+	메인(혜택)
+	===================================*/
+	.benefit .bnf-btm ul li {
+		width: calc(50% - 20px);
+	}
 }
 
 @media all and (max-width: 414px) {
@@ -384,7 +456,7 @@ header.main:not(.fixed) .mobile-menu:after {
 	메인(비주얼)
 	===================================*/
 	.main-visual .video-block {
-		padding-bottom: 100%;
+		padding-bottom: /*100*/150%;
 		overflow: hidden;
 	}
 

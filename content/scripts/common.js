@@ -137,6 +137,7 @@ function closeLayer() {
     $('#lay3').hide();
 }
 
+// 카운트
 function numberCounter(target_frame, target_number) {
 	this.count = 0; this.diff = 0;
 	this.target_count = parseInt(target_number);
@@ -193,7 +194,6 @@ $(document).ready(function(){
 	    $('#lay3').hide();
 	});
 
-
 	// 스크롤 반응 액션
 	$(window).scroll(function(){
 		var windowST = $(this).scrollTop();
@@ -215,14 +215,21 @@ $(document).ready(function(){
 				new numberCounter("count-no4", 42);
 			}
 		});	
-
 	});
 
-	
+	// 히스토리 대회영상
+	$("#video").tabs();
 
 	// 공지사항 동영상 콘텐츠 리사이징
-	$(".ntc-view .atc-cont iframe").parent("div").css("position", "relative");
-	$(".ntc-view .atc-cont iframe").parent("div").css("padding-bottom", "56.25%");
+//	$(".ntc-view .atc-cont iframe").parent("div").css("position", "relative");
+//	$(".ntc-view .atc-cont iframe").parent("div").css("padding-bottom", "56.25%");
 
-	
+	// FAQ
+	$("#faq").tabs();
+	$(".tab-cont").accordion({
+		animate: 100,
+		heightStyle: "content",
+		collapsible: true,
+		active: false
+	});
 });
