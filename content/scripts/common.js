@@ -218,19 +218,11 @@ $(document).ready(function(){
 
 	});
 
-	// 히스토리 대회영상
-	$("#video").tabs();
+	
 
 	// 공지사항 동영상 콘텐츠 리사이징
 	$(".ntc-view .atc-cont iframe").parent("div").css("position", "relative");
 	$(".ntc-view .atc-cont iframe").parent("div").css("padding-bottom", "56.25%");
 
-	// FAQ
-	$("#faq").tabs();
-	$(".tab-cont").accordion({
-		animate: 100,
-		heightStyle: "content",
-		collapsible: true,
-		active: false
-	});
+	
 });
