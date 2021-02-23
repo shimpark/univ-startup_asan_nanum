@@ -137,6 +137,31 @@ function closeLayer() {
     $('#lay3').hide();
 }
 
+function numberCounter(target_frame, target_number) {
+	this.count = 0; this.diff = 0;
+	this.target_count = parseInt(target_number);
+	this.target_frame = document.getElementById(target_frame);
+	this.timer = null;
+	this.counter();
+};
+
+numberCounter.prototype.counter = function() {
+	var self = this;
+	this.diff = this.target_count - this.count;
+
+	if(this.diff > 0) {
+		self.count += Math.ceil(this.diff / 5);
+	}
+
+	this.target_frame.innerHTML = this.count.toString();
+
+	if(this.count < this.target_count) {
+		this.timer = setTimeout(function() { self.counter(); }, 10);
+	} else {
+		clearTimeout(this.timer);
+	}
+};
+
 $(document).ready(function(){
 	$(".btn-view").click(function(){
 	    wrapWindowByMask();
@@ -168,16 +193,33 @@ $(document).ready(function(){
 	    $('#lay3').hide();
 	});
 
-	// GNB 고정
+
+	// 스크롤 반응 액션
 	$(window).scroll(function(){
 		var windowST = $(this).scrollTop();
 
+		// GNB 고정
 		if (windowST > 0) {
 			$("header").addClass("fixed");
 		} else {
 			$("header").removeClass("fixed");
 		}
+
+		// 지표 카운트
+		$('.count-area').each(function(){
+			var contST = $(this).offset().top;
+			if (windowST > contST - 300) {
+				new numberCounter("count-no1", 5077);
+				new numberCounter("count-no2", 110);
+				new numberCounter("count-no3", 100);
+				new numberCounter("count-no4", 42);
+			}
+		});	
+
 	});
+
+	// 히스토리 대회영상
+	$("#video").tabs();
 
 	// 공지사항 동영상 콘텐츠 리사이징
 	$(".ntc-view .atc-cont iframe").parent("div").css("position", "relative");

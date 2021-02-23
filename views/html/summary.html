@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="../../content/unitegallery/ug-theme-default.css" >
 
 	<script src="../../content/scripts/jquery-1.12.4.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="../../content/scripts/common.js"></script>
 	<script src="../../content/unitegallery/unitegallery.min.js"></script>
 	<script src="../../content/unitegallery/ug-theme-compact.js"></script>
@@ -97,14 +98,16 @@
 			</div><!--// grid -->
 		</div>
 
+
+
 		<div class="inner bg-pattern">
 			<div class="status">
-				<div class="grid">
+				<div class="grid count-area">
 					<div class="count-wrap">
-						<div class="total">
+						<span class="total">
 							전체 접수 스타트업
-							<em>5,077명</em>
-						</div>
+							<em><strong id="count-no1">5,077</strong>명</em>
+						</span>
 						<ul class="region">
 							<li>
 								<span class="rgn">서울</span>
@@ -162,215 +165,240 @@
 			</div><!--// status -->
 
 			<div class="history">
-				<div class="grid">
-					<h3 class="s-tit2"><span>2020년 정주영 창업경진대회 9</span></h3>
+				<div class="grid count-area">
+					<h3 class="s-tit2"><span>2020년 제9회 정주영 창업경진대회</span></h3>
 					<div class="indicator">
 						<h4>주요성과</h4>
 						<ul>
 							<li>
-								<em><span class="count-up">110</span>:1</em>
-								대회 경쟁률
+								<em><span id="count-no2" class="count-up">110</span>:1</em>
+								<p>대회 경쟁률</p>
 							</li>
 							<li>
-								<em><span class="count-up">100</span>%</em>
-								사업지속률
+								<em><span id="count-no3" class="count-up">100</span>%</em>
+								<p>사업지속률</p>
 							</li>
 							<li>
-								<em><span class="count-up">42</span>%</em>
-								투자유치율
+								<em><span id="count-no4" class="count-up">42</span>%</em>
+								<p>투자유치율</p>
 							</li>
 						</ul>
 					</div>
 
-
-					<section id="summaryContents" class="grid">
-						<article class="titleImg s2">
-							<div class="titleTxt">
-								<span class="Txt1">이전 대회</span>
-							</div>
-						</article>
+					<section id="summaryContents">
 						<article class="summaryCon1">
-							<div class="filter-top">
-								<select id="sel1" name="sel1" onchange="selSummary(this)">
-									<option value="">이전 대회 보기</option>
-									<option value="2019" selected>2019년 제8회</option>
-									<option value="2018">2018년 제7회</option>
-									<option value="2017">2017년 제6회</option>
-									<option value="2016">2016년 제5회</option>
-									<option value="2015">2015년 제4회</option>
-									<option value="2014">2014년 제3회</option>
-									<option value="2013">2013년 제2회</option>
-									<option value="2012">2012년 제1회</option>
-								</select>
-							</div>
-							<!-- //20190306 텍스트 수정 끝 -->
 							<div class="panel" id="tab1">
-								<h3>2019년 제8회 정주영 창업경진대회</h3> <!-- 20200302 텍스트 수정 -->
-								<div class="summary15">
-									<!--대회일정/총지원팀/결선진출팀-->
-									<div class="summary15-1">
-										<p>대회 일정</p>
-										<p class="small">2019년 3월 4일 ~ 8월 21일</p>
-									</div>
-									<div class="summary15-1">
-										<p>총 지원팀</p>
-										<p class="small">681팀</p>
-									</div>
-									<div class="summary15-1 last">
-										<p>결선 진출팀</p>
-										<p class="small">16개팀</p>
+								<div class="summaryInfo">
+									<ul>
+										<li>
+											<em>대회 일정</em>
+											<p>2020년 3월 18일 ~ 8월 30일</p>
+										</li>
+										<li>
+											<em>총 지원팀</em>
+											<p>1220팀</p>
+										</li>
+										<li>
+											<em>결선 진출팀</em>
+											<p>11개팀</p>
+										</li>
+									</ul>
+									<div class="filter">
+										<select id="sel1" name="sel1" onchange="selSummary(this)">
+											<option value="2020" selected>제9회</option>
+											<option value="2019">제8회</option>
+											<option value="2018">제7회</option>
+											<option value="2017">제6회</option>
+											<option value="2016">제5회</option>
+											<option value="2015">제4회</option>
+											<option value="2014">제3회</option>
+											<option value="2013">제2회</option>
+											<option value="2012">제1회</option>
+										</select>
 									</div>
 								</div>
-								<!-- 20200302 이미지 및 텍스트 수정 시작 -->
+
+								<!-- 수상팀 -->
 								<div class="summaryTeam">
-									<!--수상팀-->
-									<p>수상팀</p>
-									<ul>
+									<h4>수상팀</h4>
+									<ul class="rp-logo">
 										<li>
-											<a href="https://blog.naver.com/asan_nanum/221587775121" target="_blank" title="리본(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_01.jpg" alt="리본"></p>
-												<p class="teamT">리본</p>
-												<p>플라스틱 재활용 <span class="line-sum">전처리 솔루션 개발</span></p>
+											<a href="javascript:;" target="_blank" title="페이얍(새창)">
+												<span class="logo-img"><img src="../../content/images/10th/logo/last_winner_logo_01.png" alt="페이얍" /></span>
+												<span class="logo-tit">페이얍</span>
+												<span class="logo-txt">베트남 페이스북 셀러 타겟 메신저 연동 온라인 커머스 플랫폼</span>
 											</a>
 										</li>
 										<li>
-											<a href="https://www.inssait.io/home" target="_blank" title="디타임(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_02.jpg" alt="디타임"></p>
-												<p class="teamT">디타임</p>
-												<p>인사관리를 위한 클라우드 서비스</p>
+											<a href="javascript:;" target="_blank" title="아르고스(새창)">
+												<span class="logo-img"><img src="../../content/images/10th/logo/last_winner_logo_02.png" alt="아르고스" /></span>
+												<span class="logo-tit">아르고스</span>
+												<span class="logo-txt">인공지능 기반 비대면 본인 인증 및 자금세탁 위험분석 서비스</span>
 											</a>
 										</li>
 										<li>
-											<a href="https://www.facebook.com/more.science2018" target="_blank" title="모어사이언스(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_03.jpg" alt="모어사이언스"></p>
-												<p class="teamT">모어사이언스</p>
-												<p>뉴미디어 과학 콘텐츠 제작</p>
+											<a href="javascript:;" target="_blank" title="메디팔(새창)">
+												<span class="logo-img"><img src="../../content/images/10th/logo/last_winner_logo_03.png" alt="메디팔" /></span>
+												<span class="logo-tit">메디팔</span>
+												<span class="logo-txt">만성질환자의 맞춤형 건강 관리를 위한 온라인 개인 간호사 구독 서비스</span>
 											</a>
 										</li>
-										<li class="teamLast">
-											<a href="http://devotionfoods.com" target="_blank" title="디보션푸드(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_04.jpg" alt="디보션푸드"></p>
-												<p class="teamT">디보션푸드</p>
-												<p>식물성 육류 대체 식품 개발</p>
+										<li>
+											<a href="javascript:;" target="_blank" title="코르미나(새창)">
+												<span class="logo-img"><img src="../../content/images/10th/logo/last_winner_logo_04.png" alt="코르미나" /></span>
+												<span class="logo-tit">코르미나</span>
+												<span class="logo-txt">중동/북아프리카의 소비자들과 한국의 판매자들을 연결해주는 크로스보더 마켓플레이스 플랫폼</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" target="_blank" title="진지한 컴퍼니(새창)">
+												<span class="logo-img"><img src="../../content/images/10th/logo/last_winner_logo_05.png" alt="진지한 컴퍼니" /></span>
+												<span class="logo-tit">진지한 컴퍼니</span>
+												<span class="logo-txt">사이드 프로젝트를 통해 직접 경험하면서 성장하는 프로젝트 기반 IT 교육 서비스, 비사이드(B-Side)</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" target="_blank" title="블루비커(새창)">
+												<span class="logo-img"><img src="../../content/images/10th/logo/last_winner_logo_06.png" alt="블루비커" /></span>
+												<span class="logo-tit">블루비커</span>
+												<span class="logo-txt">저작권 문제없는 논문 및 연구 삽입용 콘텐츠 생성 서비스</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" target="_blank" title="닥터테일(새창)">
+												<span class="logo-img"><img src="../../content/images/10th/logo/last_winner_logo_07.png" alt="닥터테일" /></span>
+												<span class="logo-tit">닥터테일</span>
+												<span class="logo-txt">반려동물 의료기록 기반 수의사 상담 플랫폼</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" target="_blank" title="hayan AI(새창)">
+												<span class="logo-img"><img src="../../content/images/10th/logo/last_winner_logo_08.png" alt="hayan AI" /></span>
+												<span class="logo-tit">hayan AI</span>
+												<span class="logo-txt">시니어 세대와 AI를 연결하는 데이터 구축 플랫폼</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" target="_blank" title="팀아일랜드(새창)">
+												<span class="logo-img"><img src="../../content/images/10th/logo/last_winner_logo_09.png" alt="팀아일랜드" /></span>
+												<span class="logo-tit">팀아일랜드</span>
+												<span class="logo-txt">영상 효과를 자유롭게 조합해 영상을 쉽게 디자인하고 공유하는 모바일 SNS 플랫폼 ZZAZZ(째즈)</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" target="_blank" title="큐리오스튜디오(새창)">
+												<span class="logo-img"><img src="../../content/images/10th/logo/last_winner_logo_10.png" alt="큐리오스튜디오" /></span>
+												<span class="logo-tit">큐리오스튜디오</span>
+												<span class="logo-txt">누구나 쉽게 3D 콘텐츠를 제작, 유통, 구매, 수집할 수 있는 플랫폼 MXXR(믹서) 운영</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" target="_blank" title="크레이빙콜렉터(새창)">
+												<span class="logo-img"><img src="../../content/images/10th/logo/last_winner_logo_11.png" alt="크레이빙콜렉터" /></span>
+												<span class="logo-tit">크레이빙콜렉터</span>
+												<span class="logo-txt">취향별 맞춤 추천 시스템 기반의 중고 의류 거래 플랫폼</span>
 											</a>
 										</li>
 									</ul>
-									<ul>
-										<li>
-											<a href="https://www.replatform.co.kr" target="_blank" title="리햅위더스(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_05.jpg" alt="리햅위더스"></p>
-												<p class="teamT">리햅위더스</p>
-												<p>성인 언어치료 전문 플랫폼 운영</p>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.starsecretkorea.com" target="_blank" title="서울언니들(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_06.jpg" alt="서울언니들"></p>
-												<p class="teamT">서울언니들</p>
-												<p>미얀마 거점 뷰티콘텐츠커머스 운영</p>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.scalardata.co.kr" target="_blank" title="스칼라데이터(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_07.jpg" alt="스칼라데이터"></p>
-												<p class="teamT">스칼라데이터</p>
-												<p>전기자동차 충전 커넥터 개발</p>
-											</a>
-										</li>
-										<li class="teamLast">
-											<a href="http://www.todayweekends.com" target="_blank" title="오늘도주말(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_08.jpg" alt=""></p>
-												<p class="teamT">오늘도주말</p>
-												<p>네일아트 정보공유 플랫폼</p>
-											</a>
-										</li>
-									</ul>
-									<ul>
-										<li>
-											<a href="https://blog.naver.com/asan_nanum/221618271823" target="_blank" title="아이캡틴(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_09.jpg" alt="아이캡틴"></p>
-												<p class="teamT">아이캡틴</p>
-												<p>선박 재난 대피 솔루션 개발</p>
-											</a>
-										</li>
-										<li>
-											<a href="https://caster.so" target="_blank" title="캐스터(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_10.jpg" alt="캐스터"></p>
-												<p class="teamT">캐스터</p>
-												<p>예측기반 콘텐츠 테스트베드 플랫폼</p>
-											</a>
-										</li>
-										<li>
-											<a href="https://blog.naver.com/asan_nanum/221593966013" target="_blank" title="그라인더(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_11.jpg" alt="그라인더"></p>
-												<p class="teamT">그라인더</p>
-												<p>가치 기반 큐레이션 비디오 커머스</p>
-											</a>
-										</li>
-										<li class="teamLast">
-											<a href="http://www.datasee.co.kr" target="_blank" title="데이터씨(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_12.jpg" alt="데이터씨"></p>
-												<p class="teamT">데이터씨</p>
-												<p>B2B 바이오 실험자재 <span class="line-sum">온라인 유통 플랫폼</span></p>
-											</a>
-										</li>
-									</ul>
-									<ul>
-										<li>
-											<a href="https://dhive.co.kr" target="_blank" title="디하이브(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_13.jpg" alt="디하이브"></p>
-												<p class="teamT">디하이브</p>
-												<p>드론 클라우드 OS 개발</p>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.awesomedaytoeat.com" target="_blank" title="디하이브(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_14.jpg" alt="어썸데이투잇"></p>
-												<p class="teamT">어썸데이투잇</p>
-												<p>소셜 다이닝 플랫폼</p>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.palette-h.kr" target="_blank" title="제로그라운드(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_15.jpg" alt="제로그라운드"></p>
-												<p class="teamT">제로그라운드</p>
-												<p>디자이너를 위한 <span class="line-sum">임대형 공유 미용실 서비스</span></p>
-											</a>
-										</li>
-										<li class="teamLast">
-											<a href="https://comestay.kr" target="_blank" title="컴스테이(새창)">
-												<p class="teamImg"><img src="../../content/images/9th/logo/last_winner_logo_16.jpg" alt="컴스테이"></p>
-												<p class="teamT">컴스테이</p>
-												<p>반려동물과의 여행을 위한 <span class="line-sum">숙박 예약 마켓플레이스</span></p>
-											</a>
-										</li>
-									</ul>
-									<div class="backTeam"></div>
 								</div>
+								<!--// 수상팀 -->
+
+								<!-- 대회영상 -->
 								<div class="summaryPlay">
-									<p>대회영상</p>
-									<ul>
-										<li>
-											<p><a href="https://www.youtube.com/watch?v=cYgPgi_o0NE" target="_blank"><img src="../../content/images/9th/thumb/compet_video_01.jpg" alt="제8회 정주영 창업경진대회 결선 오프닝"></a><p>
-											<p>제8회 정주영 창업경진대회<br>결선 오프닝</p>
-										</li>
-										<li>
-											<p><a href="https://www.youtube.com/watch?v=iewNgxHVfSY" target="_blank"><img src="../../content/images/9th/thumb/compet_video_02.jpg" alt="리본"></a><p>
-											<p>리본</p>
-										</li>
-										<li>
-											<p><a href="https://www.youtube.com/watch?v=mO4I7EZLERo" target="_blank"><img src="../../content/images/9th/thumb/compet_video_03.jpg" alt="모어사이언스"></a><p>
-											<p>모어사이언스</p>
-										</li>
-										<li>
-											<p><a href="https://www.youtube.com/watch?v=30-blIXNEkM" target="_blank"><img src="../../content/images/9th/thumb/compet_video_04.jpg" alt="디타임"></a><p>
-											<p>디타임</p>
-										</li>
-									</ul>
-									<div class="backPlay"></div>
+									<h4>대회영상</h4>
+
+									<div id="video" class="compet-video">
+										<div class="tab-cont">
+											<!-- video #1 -->
+											<div id="video-1">
+												<div class="img-block">
+													<a href="javascript:;">
+														<span class="ico"><img src="../../content/images/10th/ico-play.png" alt="" /></span>
+														<img src="../../content/images/10th/thumb/video_img_01.png" alt="" />
+													</a>
+												</div>
+												<div class="iframe-block">
+													<iframe width="560" height="315" src="https://www.youtube.com/embed/l39coLaoSwg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+												</div>
+											</div>
+											<!--// video #1 -->
+
+											<!-- video #2 -->
+											<div id="video-2">
+												<div class="img-block">
+													<a href="javascript:;">
+														<span class="ico"><img src="../../content/images/10th/ico-play.png" alt="" /></span>
+														<img src="http://placehold.it/1008x550" alt="" />
+													</a>
+												</div>
+												<div class="iframe-block">
+													<iframe width="560" height="315" src="https://www.youtube.com/embed/4CwsUeNdXQI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+												</div>
+											</div>
+											<!--// video #2 -->
+
+											<!-- video #3 -->
+											<div id="video-3">
+												<div class="img-block">
+													<a href="javascript:;">
+														<span class="ico"><img src="../../content/images/10th/ico-play.png" alt="" /></span>
+														<img src="http://placehold.it/1008x550" alt="" />
+													</a>
+												</div>
+												<div class="iframe-block">
+													<iframe width="560" height="315" src="https://www.youtube.com/embed/iewNgxHVfSY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+												</div>
+											</div>
+											<!--// video #3 -->
+
+											<!-- video #4 -->
+											<div id="video-4">
+												<div class="img-block">
+													<a href="javascript:;">
+														<span class="ico"><img src="../../content/images/10th/ico-play.png" alt="" /></span>
+														<img src="http://placehold.it/1008x550" alt="" />
+													</a>
+												</div>
+												<div class="iframe-block">
+													<iframe width="560" height="315" src="https://www.youtube.com/embed/fcThnN4qpjA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+												</div>
+											</div>
+											<!--// video #3 -->
+										</div><!--// tab-cont -->
+
+										<ul class="tab">
+											<li>
+												<a href="#video-1">
+													정주영 창업경진대회 9
+													<em>소개 영상</em>
+												</a>
+											</li>
+											<li>
+												<a href="#video-2">
+													정주영 창업경진대회 9
+													<em>모집 영상</em>
+												</a>
+											</li>
+											<li>
+												<a href="#video-3">
+													정주영 창업경진대회 9
+													<em>데모데이 오프닝</em>
+												</a>
+											</li>
+											<li>
+												<a href="#video-4">
+													정주영 창업경진대회 9
+													<em>데모데이 온라인 LIVE</em>
+												</a>
+											</li>
+										</ul>
+									</div>
 								</div>
+								<!--// 대회영상 -->
+
+								<!-- 대회사진 -->
 								<div class="summaryGal">
-									<p>대회사진</p>
+									<h4>대회사진</h4>
 									<div id="gallery">
 										<img src="../../content/images/10th/thumb/compet_img_sm_01.jpg" data-image="../../content/images/10th/thumb/compet_img_01.jpg" alt="대회 현장 사진">
 										<img src="../../content/images/9th/thumb/compet_img_sm_02.jpg" data-image="../../content/images/9th/thumb/compet_img_02.jpg" alt="대회 현장 사진">
@@ -394,8 +422,8 @@
 										<img src="../../content/images/9th/thumb/compet_img_sm_20.jpg" data-image="../../content/images/9th/thumb/compet_img_20.jpg" alt="대회 현장 사진">
 									</div>
 								</div>
-								<!-- //20190306 이미지 및 텍스트 수정 끝 -->
-							</div>
+								<!--// 대회사진 -->
+							</div><!--// panel -->
 						</article>
 					</section>
 
@@ -426,7 +454,6 @@
 							thumb_selected_border_color: "rgba(202,255,237,0.33)"
 						});
 					</script>
-
 
 				</div><!--// grid -->
 			</div><!--// history -->
