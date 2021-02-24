@@ -63,7 +63,8 @@ header.main:not(.fixed) .mobile-menu:after {
 }
 
 .main-visual .video-block video,
-.main-visual .video-block iframe {
+.main-visual .video-block iframe,
+#mainVslYtb { /* 0224 zoe 클래스 추가 */
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -474,7 +475,8 @@ header.main:not(.fixed) .mobile-menu:after {
 	.main-visual .video-block .overlay,
 	.main-visual .video-block video,
 	.main-visual .video-block iframe,
-	.main-visual .grid img {
+	#mainVslYtb,
+	.main-visual .grid img { /* 0224 zoe 클래스 추가 */
 		display: none;
 	}
 }
