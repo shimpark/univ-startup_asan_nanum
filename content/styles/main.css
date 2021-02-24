@@ -62,7 +62,8 @@ header.main:not(.fixed) .mobile-menu:after {
 	background: url(../images/10th/bg-main-visual-overlay.png);
 }
 
-.main-visual .video-block video {
+.main-visual .video-block video,
+.main-visual .video-block iframe {
 	position: absolute;
 	top: 0;
 	left: 0;

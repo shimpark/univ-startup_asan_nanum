@@ -51,8 +51,19 @@
 	font-weight: 700;
 }
 
-.sub-visual.sv3 {
-	background-image: url(../images/10th/sub-visual-information.png);
+.sub-visual .grid h2 .desc:before {
+	display: block;
+	width: 1px;
+	height: 4rem;
+	margin: 45px auto 43px;
+	background-color: #fff;
+	content: "";
+
+}
+
+.sub-visual .grid h2 .desc {
+	display: block;
+	font-size: 0.9rem;
 }
 
 .tabs {
@@ -330,6 +341,162 @@
 .rp-logo li .logo-tit {
 	margin: 1.25rem 0 0.05rem;
 	font-weight: 700;
+}
+
+
+/*===================================
+정주영 창업경진대회
+===================================*/
+.sub-visual.sv1-1 {
+	background-image: url(../images/10th/sub-visual-intro.png);
+}
+
+.intro {
+	padding-top: 5rem;
+}
+
+.purpose {
+	display: flex;
+	align-items: center;
+	margin: 2.7rem 0 3.55rem;
+}
+
+.purpose li {
+	flex: 1;
+	font-size: 1.6rem;
+	font-weight: 300;
+	color: #183d31;
+	line-height: 0.95;
+}
+
+.purpose li:first-child {
+	text-align: right;
+}
+
+.purpose li.plus {
+	flex: none;
+	margin: 0 1.4rem;
+}
+
+.purpose li:last-child {
+	line-height: 1.47;
+}
+
+.purpose li em {
+	display: inline-block;
+	font-weight: 500;
+}
+
+.purpose li em:after {
+	display: block;
+	position: relative;
+	bottom: 0.35rem;
+	left: -0.35rem;
+	z-index: -1;
+	width: calc(100% + 0.7rem);
+	height: 0.85rem;
+	border-radius: 0.425rem;
+	background: url(../images/10th/bg-sub-tit-pattern.png);
+	content: "";
+}
+
+.prog-process {
+	padding: 5rem 0;
+	background-color: #e7edeb;
+}
+
+.prog-process .s-tit {
+	margin-bottom: 1.65rem;
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: #000;
+	text-align: center;
+}
+
+.prog-process img {
+	max-width: 100%;
+}
+
+.program {
+	margin-bottom: -6.5rem;
+	padding: 5rem 0 16.5rem;
+	background: #7d7a76 url(../images/10th/sub-visual-intro-program.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.program .s-tit {
+	font-size: 0.9rem;
+	color: #fff;
+	text-align: center;
+}
+
+.program .s-tit em {
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 400;
+}
+
+.prg-list {
+	display: flex;
+	height: 5rem;
+	margin-top: 5rem;
+	padding-top: 1.3rem;
+	border-radius: 0.25rem;
+	background-color: #3f5a50;
+}
+
+.prg-list li {
+	position: relative;
+	width: calc(20% - 3.2rem);
+	margin: 0 1.6rem;
+	text-align: center;
+}
+
+.prg-list li h4 {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: #fff;
+}
+
+.prg-list li:hover h4 {
+	position: absolute;
+	top: -50px;
+	left: 0;
+	padding: 2rem 1rem;
+	border-radius: 0.25rem;
+	border: 0.35rem solid #eae9e7;
+	background-color: #fff;
+	color: #183d31;
+}
+
+.prg-list li h4:before {
+	display: block;
+	width: 0.35rem;
+	height: 0.35rem;
+	margin: 0 auto;
+	border-radius: 100%;
+	background-color: #c6ded6;
+	content: "";
+}
+
+.prg-list li h4 .desc {
+	display: none;
+	font-size: 0.8rem;
+	font-weight: 400;
+	color: #000;
+}
+
+.prg-list li:hover h4 .desc {
+	display: block;
+}
+
+.prg-list li h4 .desc:before {
+	display: block;
+	width: 1.5rem;
+	height: 1px;
+	margin: 1.3rem auto 1.2rem;
+	background-color: #000;
+	content: "";
 }
 
 
@@ -687,7 +854,7 @@
 	top: 50%;
 	left: 50%;
 	width: 3.35rem;
-	transform: translate(-50%, -50%);	
+	transform: translate(-50%, -50%);
 }
 
 .summaryPlay .compet-video .tab-cont .img-block a img {
@@ -792,6 +959,131 @@
 
 
 /*===================================
+혜택
+===================================*/
+.sub-visual.sv1-3 {
+	background-image: url(../images/10th/sub-visual-benefit.png);
+}
+
+.startup-benefit {
+	padding-top: 5rem;
+}
+
+.bnf-list {
+	margin-top: 4rem;
+}
+
+.bnf-list > li {
+	display: flex;
+}
+
+.bnf-list > li > ul {
+	flex: none;
+	width: 36.2318840%;
+	padding: 3.35rem 0 3.85rem;
+	border-top: 0.15rem solid #183d31;
+}
+
+.bnf-list > li > ul li h4 {
+	display: inline-block;
+	position: relative;
+	padding: 0 0.35rem;
+	font-weight: 500;
+}
+
+.bnf-list > li > ul li h4:after {
+	display: block;
+	position: relative;
+	bottom: 0.5rem;
+	left: -0.35rem;
+	z-index: -1;
+	width: calc(100% + 0.7rem);
+	height: 0.85rem;
+	border-radius: 0.425rem;
+	background: url(../images/10th/bg-sub-tit-pattern.png);
+	content: "";
+}
+
+.bnf-list > li > ul li:last-child {
+	margin-top: 2rem;
+	text-align: right;
+}
+
+.bnf-list > li > ul li .ico {
+	display: inline-block;
+	width: 8.65rem;
+	height: 8.65rem;
+	background-repeat: no-repat;
+	background-size: 100%;
+}
+
+.bnf-list > li.bnf1 > ul li .ico {
+	background-image: url(../images/10th/ico-benefit1.png);
+}
+
+.bnf-list > li.bnf2 > ul li .ico {
+	background-image: url(../images/10th/ico-benefit2.png);
+}
+
+.bnf-list > li.bnf3 > ul li .ico {
+	background-image: url(../images/10th/ico-benefit3.png);
+}
+
+.bnf-list > li > ol {
+	padding: 3.55rem 0 3.65rem 4rem;
+	border-top: 0.15rem solid #f6f6f8;
+}
+
+.bnf-list > li > ol li {
+	margin-top: 1rem;
+}
+
+.bnf-list > li > ol li:first-child {
+	margin-top: 0;
+}
+
+.bnr.bnf {
+	margin-bottom: -6.5rem;
+	background: url(../images/10th/bg-bnr-mentor.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.bnr.bnf .grid {
+	position: relative;
+	padding-bottom: 17.8645833%;
+}
+
+.bnr.bnf .grid a {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #fff;
+}
+
+.bnr.bnf .grid a em strong {
+	font-weight: 700;
+}
+
+.bnr.bnf .grid a .ico {
+	flex: none;
+	margin-left: 2rem;
+}
+
+.bnr.bnf .grid a .ico.arr {
+	width: 2.7rem;
+	height: 2.7rem;
+	background: url(../images/10th/ico-dbl-arr.png) no-repeat;
+	background-size: 100%;
+}
+
+
+/*===================================
 파트너
 ===================================*/
 .sub-visual.sv2 {
@@ -883,6 +1175,10 @@
 /*===================================
 대회안내
 ===================================*/
+.sub-visual.sv3 {
+	background-image: url(../images/10th/sub-visual-information.png);
+}
+
 .info-visual {
 	position: relative;
 	margin-bottom: 1.75rem;
@@ -1429,6 +1725,10 @@
 	color: rgba(0, 0, 0, 0.5);
 }
 
+.ntc-view {
+	overflow: hidden;
+}
+
 .ntc-view .atc-hd {
 	padding: 2rem 0 2.2rem;
 	border-top: 1px solid #183d31;
@@ -1450,6 +1750,7 @@
 .ntc-view .atc-cont {
 	padding: 3.5rem 3rem;
 	font-size: 0.9rem;
+	overflow-x: auto;
 }
 
 .ntc-view .atc-cont p {
@@ -1498,6 +1799,10 @@
 
 .ntc-view .atc-file ul li a {
 	font-size: 0.9rem;
+}
+
+.ntc-view + .btn-wrap {
+	margin-top: 4rem;
 }
 
 .faq {
@@ -1611,6 +1916,15 @@
 }
 
 @media all and (max-width: 1419px) {
+	/*===================================
+	정주영 창업경진대회
+	===================================*/
+	.sub-visual .grid h2 .desc:before {
+		height: 2rem;
+		margin: 1rem auto;
+	}
+
+
 	/*===================================
 	히스토리
 	===================================*/
@@ -1733,6 +2047,20 @@
 	}
 }
 
+@media all and (max-width: 1065px) {
+	/*===================================
+	정주영 창업경진대회
+	===================================*/
+	.purpose {
+		flex-direction: column;
+	}
+
+	.purpose li:first-child,
+	.purpose li:last-child {
+		text-align: center;
+	}
+}
+
 @media all and (max-width: 896px) {
 	/*===================================
 	대회안내
@@ -1765,6 +2093,14 @@
 
 	.sub-visual .grid {
 		padding-bottom: 56.25%;
+	}
+
+
+	/*===================================
+	정주영 창업경진대회
+	===================================*/
+	.sub-visual.sv1-1 .grid {
+		padding-bottom: 75%;
 	}
 
 
@@ -1802,6 +2138,17 @@
 		display: none;
 	}
 
+	/*===================================
+	혜택
+	===================================*/
+	.bnr.bnf {
+		background-size: auto 100%;
+	}
+
+	.bnr.bnf .grid {
+		padding-bottom: 178px;
+	}
+
 
 	/*===================================
 	지원하기
@@ -1814,6 +2161,39 @@
 		width: 4.3rem;
 		height: 4.3rem;
 		margin-right: 1rem;
+	}
+
+	.frm-wrap .frm li.phase {
+		flex-wrap: wrap;
+	}
+
+	.frm-wrap .frm li.phase ul.flx {
+		flex: none;
+		width: 33.3333333%;
+		min-height:
+	}
+
+	.frm-wrap .frm li.phase ul.flx:first-child,
+	.frm-wrap .frm li.phase ul.flx:nth-child(2) {
+		width: 50%;
+		margin-bottom: 1px;
+	}
+
+	.frm-wrap .frm li.phase ul.flx:nth-child(2) {
+		width: calc(50% - 1px);
+	}
+
+	.frm-wrap .frm li.phase ul.flx:nth-child(3) {
+		margin-left: 0;
+	}
+
+	.frm-wrap .frm li.phase ul.flx:nth-child(4),
+	.frm-wrap .frm li.phase ul.flx:nth-child(5) {
+		width: calc(33.3333333% - 1px);
+	}
+
+	.frm-wrap .frm li.phase ul.flx li input[type=checkbox]:checked + label {
+		padding-top: 1.45rem;
 	}
 
 
@@ -1984,6 +2364,32 @@
 
 
 	/*===================================
+	혜택
+	===================================*/
+	.bnf-list > li {
+		flex-direction: column;
+	}
+
+	.bnf-list > li > ul {
+		width: auto;
+	}
+
+	.bnf-list > li > ul li {
+		text-align: center;
+	}
+
+	.bnf-list > li > ul li:last-child {
+		text-align: center;
+	}
+
+	.bnf-list > li > ol {
+		padding-top: 0;
+		padding-left: 35px;
+		border-top: none;
+	}
+
+
+	/*===================================
 	대회안내
 	===================================*/
 	.info-visual .white-rect {
@@ -2012,6 +2418,18 @@
 
 	.frm-wrap .frm li.flx-wr.custom1 ul:last-child li > span {
 		width: calc(100% - 6.6rem);
+	}	
+
+	.frm-wrap .frm li.phase ul.flx li label {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 77px;
+		padding: 0;
+	}
+
+	.frm-wrap .frm li.phase ul.flx li input[type=checkbox]:checked + label {
+		padding-top: 0;
 	}
 
 

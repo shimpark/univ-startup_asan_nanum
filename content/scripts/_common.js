@@ -162,8 +162,7 @@ numberCounter.prototype.counter = function() {
 		clearTimeout(this.timer);
 	}
 };
-var count1 = null;
-var count2 = null;
+
 $(document).ready(function(){
 	$(".btn-view").click(function(){
 	    wrapWindowByMask();
@@ -196,9 +195,27 @@ $(document).ready(function(){
 	});
 
 	// 스크롤 반응 액션
-	$(window).scroll(numberCountCheck);
+	$(window).scroll(function(){
+		var windowST = $(this).scrollTop();
 
-	numberCountCheck();
+		// GNB 고정
+		if (windowST > 0) {
+			$("header").addClass("fixed");
+		} else {
+			$("header").removeClass("fixed");
+		}
+
+		// 지표 카운트
+		$('.count-area').each(function(){
+			var contST = $(this).offset().top;
+			if (windowST > contST - 300) {
+				new numberCounter("count-no1", 5077);
+				new numberCounter("count-no2", 110);
+				new numberCounter("count-no3", 100);
+				new numberCounter("count-no4", 42);
+			}
+		});	
+	});
 
 	// 히스토리 대회영상
 	$("#video").tabs();
@@ -216,33 +233,3 @@ $(document).ready(function(){
 		active: false
 	});
 });
-
-function numberCountCheck(){
-	var windowST = $(window).scrollTop();
-	var doc_height = $( window ).innerHeight() - 300;
-	// console.log(doc_height);
-	// GNB 고정
-	if (windowST > 0) {
-		$("header").addClass("fixed");
-	} else {
-		$("header").removeClass("fixed");
-	}
-
-	if(!count1 || !count2){
-		// 지표 카운트
-		$('.count-area').each(function(idx){
-			var contST = $(this).offset().top;
-			if (windowST > (contST - doc_height)) {
-				console.log(idx);
-				if( count1 == null && idx === 0 ){
-					count1 = new numberCounter("count-no1", 5077);
-				}
-				if( count2 == null && idx === 1 ){
-					count2 = new numberCounter("count-no2", 110);
-					new numberCounter("count-no3", 100);
-					new numberCounter("count-no4", 42);
-				}
-			}
-		});
-	}
-}
