@@ -195,6 +195,43 @@ $(document).ready(function(){
 	    $('#lay3').hide();
 	});
 
+	// 정주영 창업지원경진대회 사업실행단계 지원 프로그램
+	var windowW = $(window).width();
+
+	if (windowW > 1140) {
+		if (!$(".prg-list li").hasClass("active")) {
+			$("#prg1").addClass("active");
+		}
+
+		$("#prg1").mouseover(function(){
+			$(this).addClass("active");
+			$("#prg2, #prg3, #prg4, #prg5").removeClass("active");
+		});
+
+		$("#prg2").mouseover(function(){
+			$(this).addClass("active");
+			$("#prg1, #prg3, #prg4, #prg5").removeClass("active");
+		});
+
+		$("#prg3").mouseover(function(){
+			$(this).addClass("active");
+			$("#prg1, #prg2, #prg4, #prg5").removeClass("active");
+		});
+
+		$("#prg4").mouseover(function(){
+			$(this).addClass("active");
+			$("#prg1, #prg2, #prg3, #prg5").removeClass("active");
+		});
+
+		$("#prg5").mouseover(function(){
+			$(this).addClass("active");
+			$("#prg1, #prg2, #prg3, #prg4").removeClass("active");
+		});
+	}
+	
+	$("#prog").tabs();
+	
+
 	// 스크롤 반응 액션
 	$(window).scroll(numberCountCheck);
 
@@ -209,7 +246,7 @@ $(document).ready(function(){
 
 	// FAQ
 	$("#faq").tabs();
-	$(".tab-cont").accordion({
+	$("#faq .tab-cont").accordion({
 		animate: 100,
 		heightStyle: "content",
 		collapsible: true,

@@ -457,13 +457,24 @@ header.main:not(.fixed) .mobile-menu:after {
 	메인(비주얼)
 	===================================*/
 	.main-visual .video-block {
-		padding-bottom: /*100*/150%;
+		padding-bottom: 129.2708333%;
+		background: url(../images/10th/m-main-visual.png) no-repeat;
+		background-size: cover;
 		overflow: hidden;
 	}
 
+	/*
 	.main-visual .video-block video {
 		left: 50%;
 		width: auto;
 		transform: translateX(-50%);
+	}
+	*/
+
+	.main-visual .video-block .overlay,
+	.main-visual .video-block video,
+	.main-visual .video-block iframe,
+	.main-visual .grid img {
+		display: none;
 	}
 }
