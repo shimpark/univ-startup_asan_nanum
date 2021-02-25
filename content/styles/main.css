@@ -57,7 +57,17 @@ header.main:not(.fixed) .mobile-menu:after {
 .main-visual .video-block {
 	position: relative;
 	z-index: -1;
+	/*
 	padding-bottom: 56.25%;
+	*/
+	padding-bottom: 45%;
+	overflow: hidden;
+
+}
+
+.main-visual .video-block .youtube-background {
+	width: 125% !important;
+	background-size: auto 100% !important;
 }
 
 .main-visual .video-block .overlay {
@@ -481,6 +491,7 @@ header.main:not(.fixed) .mobile-menu:after {
 
 	.main-visual .video-block .overlay,
 	.main-visual .video-block video,
+	.main-visual .video-block .youtube-background,
 	.main-visual .video-block iframe,
 	.main-visual .grid img {
 		display: none;

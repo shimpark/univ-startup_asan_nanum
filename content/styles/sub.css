@@ -66,6 +66,44 @@
 	font-size: 0.9rem;
 }
 
+.sub-visual .grid > ul {
+	display: flex;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.sub-visual .grid > ul li {
+	margin-left: 6rem;
+}
+
+.sub-visual .grid > ul li:first-child {
+	margin-left: 0;
+}
+
+.sub-visual .grid > ul li a,
+.sub-visual .grid > ul li span {
+	font-size: 2rem;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.sub-visual .grid > ul li.active a,
+.sub-visual .grid > ul li.active span {
+	font-weight: 700;
+	color: #fff;
+}
+
+.sub-visual .grid > ul li.active a:after,
+.sub-visual .grid > ul li.active span:after {
+	display: block;
+	width: 2.3rem;
+	height: 0.1rem;
+	margin: 0.5rem auto 0;
+	background-color: #fff;
+	content: "";
+}
+
 .tabs {
 	margin-bottom: 5rem;
 	border-bottom: 1px solid #183d31;
@@ -1533,6 +1571,33 @@
 	content: "";
 }
 
+.frm-wrap .lgn > li.other.v1 .links {
+	position: relative;
+	margin-left: 0.75rem;
+	padding-left: 0.85rem;
+}
+
+.frm-wrap .lgn > li.other.v1 .links:before {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 0.35rem;
+	height: 0.35rem;
+	border-radius: 100%;
+	background-color: #b6d3ca;
+	transform: translateY(-50%);
+	content: "";
+}
+
+.frm-wrap .lgn > li.other.v1 .links a {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.frm-wrap .lgn > li.other.v1 .links a:before {
+	display: none;
+}
+
 .frm-wrap.sns .btn-wrap {
 	margin-top: 0;
 }
@@ -1723,45 +1788,6 @@
 
 .sub-visual.sv4 .grid {
 	padding-bottom: 13.0729166%;
-}
-
-.sub-visual.sv4 .grid > ul {
-	display: flex;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.sub-visual.sv4 .grid > ul li {
-	margin-left: 6rem;
-}
-
-.sub-visual.sv4 .grid > ul li:first-child {
-	margin-left: 0;
-}
-
-.sub-visual.sv4 .grid > ul li a {
-	font-size: 2rem;
-	color: rgba(255, 255, 255, 0.5);
-}
-
-.sub-visual.sv4 .grid > ul li a.en {
-	font-family: "Montserrat", sans-serif;
-}
-
-.sub-visual.sv4 .grid > ul li.active a {
-	font-weight: 700;
-	color: #fff;
-}
-
-.sub-visual.sv4 .grid > ul li.active a:after {
-	display: block;
-	width: 2.3rem;
-	height: 0.1rem;
-	margin: 0.5rem auto 0;
-	background-color: #fff;
-	content: "";
 }
 
 .notice {
@@ -1997,6 +2023,28 @@
 .faq .tab-cont p.ui-accordion-content-active {
 	border-bottom: 1px solid #183d31;
 }
+
+
+/*===================================
+개인정보처리방침
+===================================*/
+.sub-visual.sv-etc {
+	background-image: url(../images/10th/sub-visual-etc.png);
+}
+
+.sub-visual.sv-etc .grid {
+	padding-bottom: 13.0729166%;
+}
+
+.privacy {
+	padding-top: 5rem;
+}
+
+
+/*===================================
+아이디 찾기/비밀번호 잦기(레이어)
+===================================*/
+
 
 
 /*===================================
@@ -2438,6 +2486,18 @@
 
 	.ntc-view .atc-file em {
 		margin-right: 20px
+	}
+
+
+	/*===================================
+	개인정보처리방침
+	===================================*/
+	.sub-visual.sv-etc {
+		background-size: auto 100%;
+	}
+
+	.sub-visual.sv-etc .grid {
+		padding-bottom: 39.4444444%;
 	}
 }
 

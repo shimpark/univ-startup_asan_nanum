@@ -1,67 +1,3 @@
-/*메뉴 ***************************/
-$(function(){
-    $(".gnb > li.g1").mouseenter(function(){
-        $(".bg-snb").animate({ "height": "98" }, 100, function(){
-            $(".snb.s1").css("display", "flex");
-        });
-        $(".snb.s3").css("display", "none");
-        $(".snb.s4").css("display", "none");
-    });
-    $(".gnb > li.g2").mouseenter(function(){
-        $(".bg-snb").animate({ "height": "0" }, 100);
-        $(".snb").css("display", "none");
-    });
-    $(".gnb > li.g3").mouseenter(function(){
-        $(".bg-snb").animate({ "height": "98" }, 100, function(){
-            $(".snb.s3").css("display", "flex");
-        });
-        $(".snb.s1").css("display", "none");
-        $(".snb.s4").css("display", "none");
-    });
-    $(".gnb > li.g4").mouseenter(function(){
-        $(".bg-snb").animate({ "height": "98" }, 100, function(){
-            $(".snb.s4").css("display", "flex");
-        });
-        $(".snb.s1").css("display", "none");
-        $(".snb.s3").css("display", "none");
-    });
-    $(".bg-snb").mouseleave(function(){
-        $(".bg-snb").animate({ "height": "0" }, 100);
-        $(".snb.s1").css("display", "none");
-        $(".snb.s3").css("display", "none");
-        $(".snb.s4").css("display", "none");
-    });
-
-	//return false;
-	$(".mobile-menu").click(function(){
-		wrapWindowByMask();
-		$(".snb, .bg-snb").removeAttr("style");
-		$("header").css("z-index", "2");
-		$("body").addClass("mobile-menu-opened");
-		$(".gnb").show();
-	});
-
-	$(".menu-close").click(function(){
-		$(".gnb").hide();
-		$("header").css("z-index", "1");
-		$("body").removeClass("mobile-menu-opened");
-		$(".mask").hide();
-	});
-
-	/* close mask */
-	$(".mask").click(function(){
-	    var winWidth = $(window).width();
-	    $(".mask").hide();
-	    if ($(".m-show").css("display") == "block") {
-	        $(".gnb").hide();
-			$("header").css("z-index", "1");
-	    }
-	    $('#lay1').hide();
-	    $('#lay2').hide();
-	    $('#lay3').hide();
-	});
-});
-
 function wrapWindowByMask(){
 	var maskHeight = $(document).height();
 	$(".mask").css({
@@ -70,74 +6,13 @@ function wrapWindowByMask(){
 	$(".mask").fadeTo("fast", 1);
 }
 
-$(window).resize(function(){
-	if($(".m-show").css("display")=="none"){
-		if($(".gnb").css("display") == "none"){
-			if($(window).width() >= 999){
-			    $(".gnb").show();
-			    $(".bg-snb").animate({ "height": "0" }, 0);
-			    $(".snb.s1").css("display", "none");
-			    $(".snb.s2").css("display", "none");
-			}
-		} else {
-		    if ($("#lay1").css("display") == "none") {
-		        $(".mask").hide();
-		    }
-		}
-	} else {
-	    if ($(".mask").css("display") == "none") {
-	        $(".gnb").hide();
-	    }
-	}
-});
-
-
-/*��ũ��ž***************************/
-$(function(){
-	$("#top").click(function(){
-		$("body, html").animate({"scrollTop":"0"},	600);
-	});
-});
-
-$(function(){
-	$("dd:not(:first)").css("display","none");
-	$("dl dt").click(function(){
-		if($("+dd",this).css("display")=="none"){
-			$("dd").slideUp("slow");
-			$("+dd",this).slideDown("slow");
-		}
-	});
-});
-
-function setHeight_qna(obj) {
-    $("#faqContents").animate({ "height": "auto" }, 300);
-}
-
-function layTop(){
-	var winHeight = $(window).height();
-	var lay1Height = $("#lay1").height();
-
-	$("#lay1").css({
-		"top": 100
-	});
-}
-
-var HideLayer = function(){
-	$("#lay1").hide();
-}
-
-var HideMask = function(){
+function mobileMenuClose(){
+	$(".gnb").hide();
+	$("header").css("z-index", "1");
+	$("body").removeClass("mobile-menu-opened");
 	$(".mask").hide();
 }
 
-function closeLayer() {
-    $('.mask').hide();
-    $('#lay1').hide();
-    $('#lay2').hide();
-    $('#lay3').hide();
-}
-
-// 카운트
 function numberCounter(target_frame, target_number) {
 	this.count = 0; this.diff = 0;
 	this.target_count = parseInt(target_number);
@@ -146,7 +21,7 @@ function numberCounter(target_frame, target_number) {
 	this.counter();
 };
 
-numberCounter.prototype.counter = function() {
+numberCounter.prototype.counter = function(){
 	var self = this;
 	this.diff = this.target_count - this.count;
 
@@ -157,48 +32,159 @@ numberCounter.prototype.counter = function() {
 	this.target_frame.innerHTML = this.count.toString();
 
 	if(this.count < this.target_count) {
-		this.timer = setTimeout(function() { self.counter(); }, 10);
+		this.timer = setTimeout(function(){ self.counter(); }, 10);
 	} else {
 		clearTimeout(this.timer);
 	}
 };
+
+function numberCountCheck(){
+	var doc_height = $( window ).innerHeight() - 300;
+
+	if(!count1 || !count2){
+		// 지표 카운트
+		$(".count-area").each(function(idx){
+			var windowST = $(window).scrollTop();
+			var contST = $(this).offset().top;
+			if (windowST > (contST - doc_height)) {
+				console.log(idx);
+				if( count1 == null && idx === 0 ){
+					count1 = new numberCounter("count-no1", 5077);
+				}
+				if( count2 == null && idx === 1 ){
+					count2 = new numberCounter("count-no2", 110);
+					new numberCounter("count-no3", 100);
+					new numberCounter("count-no4", 42);
+				}
+			}
+		});
+	}
+}
+
 var count1 = null;
 var count2 = null;
+
+function GetTopPos(o){
+	var obj_height = 0;
+	if ($(o).outerHeight() == undefined) {
+		obj_height = 0;
+	}
+	else {
+		obj_height = ($(o).outerHeight() / 2);
+	}
+
+	var pos_y = ($(window).height() / 2 + $(window).scrollTop()) - obj_height;
+	if (pos_y < 0 || pos_y < $(window).scrollTop()) {
+		pos_y = $(window).scrollTop();
+	}
+	return pos_y;
+}
+
+
 $(document).ready(function(){
-	$(".btn-view").click(function(){
-	    wrapWindowByMask();
-	    $("body, html").animate({ "scrollTop": "0" }, 600);
-	    if ($(".m-show").css("display") == "block") {
-	        $(".gnb").hide();
-	    }
-        layTop();
-		$("#lay1").show();
+	// 기본 메뉴
+    $(".gnb > li.g1").mouseenter(function(){
+        $(".bg-snb").animate({ "height": "98" }, 100, function(){
+            $(".snb.s1").css("display", "flex");
+			$(".snb:not(.s1)").css("display", "none");
+        });
+    });
+
+    $(".gnb > li.g2").mouseenter(function(){
+        $(".bg-snb").animate({ "height": "0" }, 100);
+        $(".snb").css("display", "none");
+    });
+
+    $(".gnb > li.g3").mouseenter(function(){
+        $(".bg-snb").animate({ "height": "98" }, 100, function(){
+            $(".snb.s3").css("display", "flex");
+			$(".snb:not(.s3").css("display", "none");
+        });
+    });
+
+    $(".gnb > li.g4").mouseenter(function(){
+        $(".bg-snb").animate({ "height": "98" }, 100, function(){
+            $(".snb.s4").css("display", "flex");
+			$(".snb:not(.s4)").css("display", "none");
+        });
+    });
+
+    $(".bg-snb").mouseleave(function(){
+        $(".bg-snb").animate({ "height": "0" }, 100);
+        $(".snb").css("display", "none");
+    });
+
+
+	// 모바일 메뉴(1419px 분기)
+	$(".mobile-menu").click(function(){
+		wrapWindowByMask();
+		$("header").css("z-index", "2");
+		$("body").addClass("mobile-menu-opened");
+		$(".gnb").css("display", "block");
 	});
 
-	$(".Fivebtn-view").click(function(){
-	    wrapWindowByMask();
-	    $("#lay2").css({ "top": $(window).scrollTop() + 150 });
-	    $("#lay2").show();
+
+	// 모바일 메뉴 닫기
+	$(".menu-close").click(function(){
+		mobileMenuClose();
 	});
 
-	$(".Filebtn-view").click(function(){
-	    wrapWindowByMask();
-	    $("#lay3").css({ "top": $(window).scrollTop() + 150 });
-	    $("#lay3").show();
+
+	// 모바일 메뉴 닫기 전 브라우저 리사이징 대응
+	$(window).resize(function(){
+		if ($("body").hasClass("mobile-menu-opened")){
+			if ($(window).width() >= 1420){
+				mobileMenuClose();
+			}
+		}
 	});
 
-	$('.btn-close').click(function (e) {
-	    e.preventDefault();
-	    $('.mask').hide();
-	    $('#lay1').hide();
-	    $('#lay2').hide();
-	    $('#lay3').hide();
+
+	// 마스크 닫기
+	$(".mask").click(function(){
+		if ($("body").hasClass("mobile-menu-opened")){
+			mobileMenuClose();
+		}
+	    $(".mask").hide();
+	    $(".lay").hide();
 	});
+
+
+	// 상단으로 가기
+	$("#top").click(function(){
+		$("body, html").animate({"scrollTop":"0"},	600);
+	});
+
+
+	// 스크롤 액션
+	$(window).scroll(function(){
+		// 메뉴 고정
+		if ($(window).scrollTop() > 0) {
+			$("header").addClass("fixed");
+		} else {
+			$("header").removeClass("fixed");
+		}
+
+		// 스크롤 반응 애니메이션
+		$(".ani-area").each(function(){
+			var windowST2 = $(window).scrollTop();
+			var contST2 = $(this).offset().top;
+			if (windowST2 > contST2 - 720) {
+				$(this).find(".aniEl").addClass("on");
+				$(this).find(".aniEl-sq").each(function (i, el) {
+					var $this = $(this);
+					setTimeout(function(){
+						$this.addClass("on");
+					}, i * 300); // milliseconds
+				});
+			}
+		});	
+	});
+
+
 
 	// 정주영 창업지원경진대회 사업실행단계 지원 프로그램
-	var windowW = $(window).width();
-
-	if (windowW > 1140) {
+	if ($(window).width() > 1140) {
 		if (!$(".prg-list li").hasClass("active")) {
 			$("#prg1").addClass("active");
 		}
@@ -229,76 +215,37 @@ $(document).ready(function(){
 		});
 	}
 
-	$(window).scroll(function () {
-		var windowST = $(this).scrollTop();	
 
-		// 스크롤 반응 애니메이션
-		$(".ani-area").each(function(){
-			var contST2 = $(this).offset().top;
-			if (windowST > contST2 - 720) {
-				$(this).find(".aniEl").addClass('on');
-				$(this).find(".aniEl-sq").each(function (i, el) {
-					var $this = $(this);
-					setTimeout(function(){
-						$this.addClass('on');
-					}, i * 300); // milliseconds
-				});
-			}
-		});	
-	});
-
-
-	// 스크롤 반응 액션
+	// 히스토리
 	$(window).scroll(numberCountCheck);
-
 	numberCountCheck();
 
-	// 히스토리 대회영상
-	$("#video").tabs();
 
-	// 정주영 창업경진대회
-	$("#prog").tabs();
-
-	// 공지사항 동영상 콘텐츠 리사이징
-//	$(".ntc-view .atc-cont iframe").parent("div").css("position", "relative");
-//	$(".ntc-view .atc-cont iframe").parent("div").css("padding-bottom", "56.25%");
-
-	// FAQ
-	$("#faq").tabs();
-	$("#faq .tab-cont").accordion({
-		animate: 100,
-		heightStyle: "content",
-		collapsible: true,
-		active: false
-	});
-});
-
-function numberCountCheck(){
-	var windowST = $(window).scrollTop();
-	var doc_height = $( window ).innerHeight() - 300;
-	// console.log(doc_height);
-	// GNB 고정
-	if (windowST > 0) {
-		$("header").addClass("fixed");
-	} else {
-		$("header").removeClass("fixed");
-	}
-
-	if(!count1 || !count2){
-		// 지표 카운트
-		$('.count-area').each(function(idx){
-			var contST = $(this).offset().top;
-			if (windowST > (contST - doc_height)) {
-				console.log(idx);
-				if( count1 == null && idx === 0 ){
-					count1 = new numberCounter("count-no1", 5077);
-				}
-				if( count2 == null && idx === 1 ){
-					count2 = new numberCounter("count-no2", 110);
-					new numberCounter("count-no3", 100);
-					new numberCounter("count-no4", 42);
-				}
-			}
+	// 아이디 찾기
+	$(".open-find-id").click(function(){
+		$(".mask").addClass("darkgreen");
+		wrapWindowByMask();
+		$(".find-id").show();
+		$(".find-id").css({
+			"top": GetTopPos(".find-id") + "px"
 		});
-	}
-}
+	});
+
+	// 비밀번호 찾기
+	$(".open-find-pw").click(function(){
+		$(".mask").addClass("darkgreen");
+		wrapWindowByMask();
+		$(".find-pw").show();
+		$(".find-pw").css({
+			"top": GetTopPos(".find-pw") + "px"
+		});
+	});
+
+	// 레이어 닫기
+	$(".lay-close").click(function(){
+	    $(".mask").hide();
+	    $(".mask").removeClass("darkgreen");
+	    $(".lay").hide();
+	});
+
+});

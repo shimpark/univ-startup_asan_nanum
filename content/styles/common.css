@@ -801,7 +801,12 @@ body.mobile-menu-opened header .menu-close {
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
-.lay{
+.mask.darkgreen {
+	background-color: rgba(24, 61, 49, 0.8);
+}
+
+.lay {
+	display: none;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -843,6 +848,33 @@ body.mobile-menu-opened header .menu-close {
 .lay-top .lay-close span:last-child {
 	margin-top: -1px;
 	transform: rotate(-45deg);
+}
+
+.lay-mdl {
+	padding: 0 2.5rem 5rem;
+}
+
+.lay-mdl .frm-wrap .frm li label,
+.lay-mdl .frm-wrap .frm li .desc {
+	font-weight: 500;
+}
+
+.lay-mdl .frm-wrap .frm li .desc {
+	color: #629889;
+}
+
+.lay-mdl .btn-wrap .btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 10.5rem;
+	height: 2.5rem;
+	padding: 0;
+	border-radius: 0;
+	font-size: 0.9rem;
+	font-weight: 400;
+	line-height: 1;
 }
 
 
@@ -945,6 +977,41 @@ body.mobile-menu-opened header .menu-close {
 	}
 }
 
+/* background circle animation
+===================================*/
+.backgrondCircleAni {
+	overflow: hidden;
+}
+
+.backgrondCircleAni .grid:before {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border-radius: 100%;
+	background-color: #fff;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	content: "";
+}
+
+.backgrondCircleAni.on .grid:before {
+	animation-name: backgrondCircleAni;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes backgrondCircleAni {
+	100% {
+		width: 96rem;
+		height: 96rem;
+		opacity: 0;
+	}
+}
+
 /* animation duration option
 ===================================*/
 .duration-0-25s {
@@ -963,6 +1030,10 @@ body.mobile-menu-opened header .menu-close {
 
 .delay-0-5s {
 	animation-delay: 0.5s;
+}
+
+.delay-0-75s {
+	animation-delay: 0.75s;
 }
 
 
@@ -1136,6 +1207,21 @@ body.mobile-menu-opened header .menu-close {
 	}
 }
 
+@media all and (max-width: 767px) {
+	/*===================================
+	애니메이션 효과
+	===================================*/
+	/* background circle animation
+	===================================*/
+	@keyframes backgrondCircleAni {
+		100% {
+			width: 768px;
+			height: 768px;
+			opacity: 0;
+		}
+	}
+}
+
 @media all and (max-width: 651px) {
 	/*===================================
 	풋터
@@ -1215,6 +1301,7 @@ body.mobile-menu-opened header .menu-close {
 		font-size: 14px;
 	}
 
+
 	/*===================================
 	풋터
 	===================================*/
@@ -1240,5 +1327,19 @@ body.mobile-menu-opened header .menu-close {
 
 	.ft-btm .contact {
 		margin-top: 0;
+	}
+
+
+	/*===================================
+	애니메이션 효과
+	===================================*/
+	/* background circle animation
+	===================================*/
+	@keyframes backgrondCircleAni {
+		100% {
+			width: 414px;
+			height: 414px;
+			opacity: 0;
+		}
 	}
 }

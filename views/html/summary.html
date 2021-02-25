@@ -17,10 +17,15 @@
 	<link rel="stylesheet" href="../../content/unitegallery/ug-theme-default.css" >
 
 	<script src="../../content/scripts/jquery-1.12.4.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="../../content/scripts/jquery-ui-1.12.1.custom.js"></script>
 	<script src="../../content/scripts/common.js"></script>
 	<script src="../../content/unitegallery/unitegallery.min.js"></script>
 	<script src="../../content/unitegallery/ug-theme-compact.js"></script>
+	<script>
+    $(document).ready(function(){
+		$("#video").tabs();
+	});
+    </script>
 </head>
 <body>
 	<header>
@@ -29,7 +34,7 @@
 			<a href="javascript:;" class="m-show mobile-menu"><span>메뉴</span></a>
 			<a href="javascript:;" class="menu-close"><span>닫기</span></a>
 			<nav>
-				<ul class="gnb" class="m-hide">
+				<ul class="gnb m-hide">
 					<li class="g1">
 						<a href="introoutline.html">소개</a>
 						<ul class="snb s1">
@@ -79,8 +84,8 @@
 	</header>
 
 	<div class="container">
-		<div class="sub-visual sv1-2">
-			<div class="grid">
+		<div class="sub-visual sv1-2 ani-area backgrondCircleAni on">
+			<div class="grid flShowYAni on delay-0-75s">
 				<h2>
 					<em>정주영 창업경진대회는</em>
 					10년간
@@ -469,25 +474,25 @@
 				</ul>
 				<ul class="sns">
 					<li class="asan">
-						<a href="javascript:;" target="_blank" title="새창열림">
+						<a href="https://asan-nanum.org" target="_blank" title="새창열림">
 							<i></i>
 							아산나눔재단
 						</a>
 					</li>
 					<li class="instagram">
-						<a href="javascript:;" target="_blank" title="새창열림">
+						<a href="https://www.instagram.com/asan_nanum" target="_blank" title="새창열림">
 							<i></i>
 							Instagram
 						</a>
 					</li>
 					<li class="blog">
-						<a href="javascript:;" target="_blank" title="새창열림">
+						<a href="https://blog.naver.com/asan_nanum" target="_blank" title="새창열림">
 							<i></i>
 							Blog
 						</a>
 					</li>
 					<li class="youtube">
-						<a href="javascript:;" target="_blank" title="새창열림">
+						<a href="https://www.youtube.com/channel/UCGcV3lb8krcPJqxW4Pi0ofg" target="_blank" title="새창열림">
 							<i></i>
 							Youtube
 						</a>
@@ -507,7 +512,7 @@
 					</ul>
 					<div>Copyright © The Asan Nanum Foundation. All rights reserved.</div>
 				</div>
-				<div class="privacy-policy"><a href="../../data/2021_terms.pdf" class="btn">개인정보처리방침</a></div>
+				<div class="privacy-policy"><a href="privacy.html" class="btn">개인정보처리방침</a></div>
 			</div><!--// grid -->
 		</div>
 	</footer>
