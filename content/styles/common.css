@@ -847,6 +847,126 @@ body.mobile-menu-opened header .menu-close {
 
 
 /*===================================
+애니메이션 효과
+===================================*/
+/* fade in animation
+===================================*/
+.fadeInAni {
+	opacity: 0;
+}
+
+.fadeInAni.on {
+	animation-name: fadeInAni;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAni {
+	100% {
+		opacity: 1;
+	}
+}
+
+/* float show animation
+===================================*/
+.flShowXAniRT {
+	position: relative;
+	transform: translateX(100%);
+	opacity: 0;
+}
+
+.flShowXAniRT.on {
+	animation-name: flShowXAniRt;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes flShowXAniRt {
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.flShowXAniLT {
+	position: relative;
+	transform: translateX(-100%);
+	opacity: 0;
+}
+
+.flShowXAniLT.on {
+	animation-name: flShowXAniRt;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes flShowXAniLT {
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.flShowYAni {
+	position: relative;
+	transform: translateY(25%);
+	opacity: 0;
+}
+
+.flShowYAni.on {
+	animation-name: flShowYAni;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes flShowYAni {
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.flShowDownAni {
+	position: relative;
+	transform: translateY(-50%);
+	opacity: 0;
+}
+
+.flShowDownAni.on {
+	animation-name: flShowDownAni;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes flShowDownAni {
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* animation duration option
+===================================*/
+.duration-0-25s {
+	animation-duration: 0.25s !important;
+}
+
+.duration-0-5s {
+	animation-duration: 0.5s !important;
+}
+
+/* animation delay option
+===================================*/
+.delay-0-25s {
+	animation-delay: 0.25s;
+}
+
+.delay-0-5s {
+	animation-delay: 0.5s;
+}
+
+
+/*===================================
 미디어쿼리
 ===================================*/
 @media all and (min-width: 1420px) {

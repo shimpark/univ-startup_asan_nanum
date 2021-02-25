@@ -13,9 +13,17 @@
 	<meta property="og:description" content="아산나눔재단 실전형 창업 지원 프로그램">
 
 	<link rel="stylesheet" href="../../content/styles/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.1/css/jquery.mb.YTPlayer.min.css">
 
-	<script src="../../content/scripts/jquery-1.12.4.min.js"></script>
+	<!--<script src="../../content/scripts/jquery-1.12.4.min.js"></script>-->
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.1/jquery.mb.YTPlayer.min.js"></script>
 	<script src="../../content/scripts/common.js"></script>
+	<script>
+    $(function(){
+        $("#yt-visual").YTPlayer();
+      });
+    </script>
 </head>
 <body>
 	<header class="main">
@@ -74,9 +82,21 @@
 	</header>
 
 	<section class="main-visual">
-		<div class="video-block">
+		<div id="yt-visual" class="video-block player"
+			data-property="{
+				videoURL:'https://youtu.be/9uKJaLHFpSQ',
+				mute: true,
+				showControls: false,
+				useOnMobile: true,
+				quality: 'highres',
+				containment: 'self',
+				loop: true,
+				autoPlay: true,
+				stopMovieOnBlur: false,
+				startAt: 0,
+				opacity: 1
+			  }">
 			<div class="overlay"></div>
-			<div id="mainVslYtb"></div> <!-- zoe 추가 (기존의 iframe 삭제) -->
 		</div>
 		<div class="grid">
 			<img src="../../content/images/10th/main-visual-txt.png" alt="정주영 창업경진대회 10 / 이봐, 해봤어? 峨山 정주영 / 나는 인간이 스스로 한계라고 규정짓는 일에 도전하여 그것을 이루어 내는 기쁨을 보람으로 기업을 해왔고 오늘도 도전을 계속하고 있다. / 아산 정주영 회장의 도전과 창조 정신을 물려받은 이 시대 젊은 스타트업 기업을 찾습니다." />
@@ -85,62 +105,62 @@
 	</section>
 
 	<section class="overview-top">
-		<div class="grid">
-			<div class="video-link">
+		<div class="grid ani-area">
+			<div class="video-link aniEl-sq flShowYAni">
 				<span class="ico"><img src="../../content/images/10th/ico-play.png" alt="" /></span>
-				<h2>정주영 창업경진대회는</h2>
-				<p>
+				<h2 class="aniEl-sq flShowXAniLT">정주영 창업경진대회는</h2>
+				<p class="aniEl-sq flShowXAniRT">
 					전국에 기업가정신과 창업 문화를 확산하고,
 					<span class="linebreak1420over">유망한 스타트업을 발굴하여 지원하는</span>
 					아산나눔재단의  실전형 창업 지원 프로그램입니다.
 				</p>
-				<a href="javascript:;" class="btn">영상으로 자세히 알아보기</a>
+				<a href="javascript:;" class="btn aniEl-sq flShowYAni">영상으로 자세히 알아보기</a>
 			</div>
 		</div><!--// grid -->
 	</section>
 
 	<section class="overview-btm">
-		<div class="grid">
-			<p>
+		<div class="grid ani-area">
+			<p class="aniEl-sq flShowDownAni delay-0-5s">
 				참가팀들은 아산나눔재단과 함께
 				<strong>
 					<span class="linebreak1420over">모집부터 데모데이까지 약 6개월의 여정을 통해</span>
 					창업생태계의 일원으로 성장하게 됩니다.
 				</strong>
 			</p>
-			<a href="javascript:;" class="btn">자세히 알아보기</a>
+			<a href="javascript:;" class="btn aniEl-sq flShowYAni delay-0-5s">자세히 알아보기</a>
 			<div class="process">
-				<img src="../../content/images/10th/process-img.png" alt="" />
+				<img src="../../content/images/10th/process-img.png" alt="" class="aniEl-sq flShowDownAni delay-0-5s" />
 				<ul>
-					<li>
+					<li class="aniEl-sq flShowXAniLT delay-0-5s duration-0-5s">
 						<h3>모집</h3>
 						<p>
 							<span class="linebreak1420over">예비창업자 및</span>
 							창업 2년 이내 기업 모집
 						</p>
 					</li>
-					<li>
+					<li class="aniEl-sq flShowXAniLT delay-0-5s duration-0-5s">
 						<h3>사전설명회</h3>
 						<p>
 							<span class="linebreak1420over">사업 소개 및 절차 안내,</span>
 							스타트업 연사 특강
 						</p>
 					</li>
-					<li>
+					<li class="aniEl-sq flShowXAniLT delay-0-5s duration-0-5s">
 						<h3>선발심사</h3>
 						<p>
 							3단계 선발 심사<br />
 							(서류 및 1·2차 면접)
 						</p>
 					</li>
-					<li>
+					<li class="aniEl-sq flShowXAniLT delay-0-5s duration-0-5s">
 						<h3>사업실행</h3>
 						<p>
 							<span class="linebreak1420over">총 14주 사업 실행,</span>
 							액셀러레이팅 과정
 						</p>
 					</li>
-					<li>
+					<li class="aniEl-sq flShowXAniLT delay-0-5s duration-0-5s">
 						<h3>데모데이</h3>
 						<p>
 							<span class="linebreak1420over">사업 발표,</span>
@@ -153,8 +173,8 @@
 	</section>
 
 	<section class="benefit">
-		<div class="grid">
-			<div class="bnf-top">
+		<div class="grid ani-area">
+			<div class="bnf-top aniEl-sq flShowXAniRT">
 				<h2>
 					<em>왜</em>
 					정주영<br />
@@ -166,30 +186,30 @@
 				</p>
 			</div>
 			<div class="bnf-btm">
-				<p>10회까지 이어진 정주영 창업경진대회만의 특별한 혜택들을 공개합니다.</p>
+				<p class="aniEl-sq flShowYAni delay-0-5s">10회까지 이어진 정주영 창업경진대회만의 특별한 혜택들을 공개합니다.</p>
 				<ul>
-					<li>
+					<li class="aniEl-sq flShowYAni delay-0-25s">
 						<span class="num">01</span>
 						<p>
 							총 상금<br />
 							1억 6천 5백만 원
 						</p>
 					</li>
-					<li>
+					<li class="aniEl-sq flShowYAni delay-0-25s">
 						<span class="num">02</span>
 						<p>
 							팀당 250만원<br />
 							시드머니 지급  
 						</p>
 					</li>
-					<li>
+					<li class="aniEl-sq flShowYAni delay-0-25s">
 						<span class="num">03</span>
 						<p>
 							벤처캐피털, 엔젤 매칭<br />
 							펀드 등 후속 투자 연계 지원
 						</p>
 					</li>
-					<li>
+					<li class="aniEl-sq flShowYAni delay-0-25s">
 						<span class="num">04</span>
 						<p>
 							클라우드 서비스,<br />
@@ -197,7 +217,7 @@
 							업무용 인프라 제공  
 						</p>
 					</li>
-					<li>
+					<li class="aniEl-sq flShowDownAni delay-0-25s">
 						<span class="num">05</span>
 						<p>
 							투자, 기술 자문,<br />
@@ -205,21 +225,21 @@
 							맞춤형 교육 프로그램 제공
 						</p>
 					</li>
-					<li>
+					<li class="aniEl-sq flShowDownAni delay-0-25s">
 						<span class="num">06</span>
 						<p>
 							지방 참가자<br />
 							교통비 지원
 						</p>
 					</li>
-					<li>
+					<li class="aniEl-sq flShowDownAni delay-0-25s">
 						<span class="num">07</span>
 						<p>
 							VC, 액셀러레이터<br />
 							파트너 전담 멘토링
 						</p>
 					</li>
-					<li>
+					<li class="aniEl-sq flShowDownAni delay-0-25s">
 						<span class="num">08</span>
 						<p>
 							마루180<br />
@@ -229,45 +249,45 @@
 				</ul>
 			</div>
 			<div class="btn-wrap">
-				<a href="javascript:;" class="btn">혜택 자세히 알아보기</a>
+				<a href="javascript:;" class="btn aniEl-sq flShowYAni delay-0-25s">혜택 자세히 알아보기</a>
 			</div>
 		</div><!--// grid -->
 	</section>
 
 	<section class="mentor">
-		<div class="grid">
+		<div class="grid ani-area">
 			<h2>
-				10회 경진대회 참가팀을 성장시켜 줄
-				<strong>6인의 멘토를 소개합니다.</strong>
+				<span class="aniEl-sq fadeInAni duration-0-5s">10회 경진대회 참가팀을 성장시켜 줄</span>
+				<strong class="aniEl-sq flShowDownAni duration-0-5s">6인의 멘토를 소개합니다.</strong>
 			</h2>
 			<ul>
-				<li>
-					<span class="mnt-img"><img src="../../content/images/10th/profile-no-img.png" alt="" /></span>
+				<li class="aniEl-sq flShowDownAni">
+					<span class="mnt-img"><img src="../../content/images/10th/profile_tmp_01.png" alt="" /></span>
 					<span class="mnt-name">홍길동 상무</span>
 					<span class="mnt-profile">롯데 액셀러레이터</span>
 				</li>
-				<li>
-					<span class="mnt-img"><img src="../../content/images/10th/profile-no-img.png" alt="" /></span>
+				<li class="aniEl-sq flShowYAni">
+					<span class="mnt-img"><img src="../../content/images/10th/profile_tmp_02.png" alt="" /></span>
 					<span class="mnt-name">홍길동 상무</span>
 					<span class="mnt-profile">롯데 액셀러레이터</span>
 				</li>
-				<li>
-					<span class="mnt-img"><img src="../../content/images/10th/profile-no-img.png" alt="" /></span>
+				<li class="aniEl-sq flShowDownAni">
+					<span class="mnt-img"><img src="../../content/images/10th/profile_tmp_03.png" alt="" /></span>
 					<span class="mnt-name">홍길동 상무</span>
 					<span class="mnt-profile">롯데 액셀러레이터</span>
 				</li>
-				<li>
-					<span class="mnt-img"><img src="../../content/images/10th/profile-no-img.png" alt="" /></span>
+				<li class="aniEl-sq flShowYAni">
+					<span class="mnt-img"><img src="../../content/images/10th/profile_tmp_01.png" alt="" /></span>
 					<span class="mnt-name">홍길동 상무</span>
 					<span class="mnt-profile">롯데 액셀러레이터</span>
 				</li>
-				<li>
-					<span class="mnt-img"><img src="../../content/images/10th/profile-no-img.png" alt="" /></span>
+				<li class="aniEl-sq flShowDownAni">
+					<span class="mnt-img"><img src="../../content/images/10th/profile_tmp_02.png" alt="" /></span>
 					<span class="mnt-name">홍길동 상무</span>
 					<span class="mnt-profile">롯데 액셀러레이터</span>
 				</li>
-				<li>
-					<span class="mnt-img"><img src="../../content/images/10th/profile-no-img.png" alt="" /></span>
+				<li class="aniEl-sq flShowYAni">
+					<span class="mnt-img"><img src="../../content/images/10th/profile_tmp_03.png" alt="" /></span>
 					<span class="mnt-name">홍길동 상무</span>
 					<span class="mnt-profile">롯데 액셀러레이터</span>
 				</li>
@@ -327,39 +347,5 @@
 		</div>
 	</footer>
 	<div class="mask"></div>
-	<!-- zoe 추가 시작 -->
-	<script>
-		//main visual player
-			var tag = document.createElement('script');
-			tag.src = "https://www.youtube.com/iframe_api";
-			var firstScriptTag = document.getElementsByTagName('script')[0];
-			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-			var mainVisualPlayer;
-
-			function onYouTubePlayerAPIReady() {
-				mainVisualPlayer = new YT.Player('mainVslYtb', {
-					videoId: '9uKJaLHFpSQ',
-					playerVars: {
-						rel: 0, //동영상 종료 후 관련 동영상 표시하지 않기
-						controls: 0,
-						modestbranding: 1, //플레어어 내 유튜브 로고 삭제
-						fs: 0, //전체 화면 버튼 삭제
-						autohide: 0,
-						mute: 1,
-						autoplay: 1,
-						loop: 1, //동영상 무한 반복
-						playlist: '9uKJaLHFpSQ' //반복시킬 동영상 주소
-					},
-					events: {
-						'onReady': onPlayerReady
-					}
-				});
-			}
-			function onPlayerReady(event) {
-				event.target.playVideo();
-			}
-	</script>
-	<!-- zoe 추가 끝 -->
 </body>
 </html>

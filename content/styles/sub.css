@@ -2035,12 +2035,13 @@
 	.prog-process .prog .tab {
 		flex-wrap: wrap;
 		justify-content: flex-start;
+		margin: 0 -10px;
 		padding: 0;
 	}
 
 	.prog-process .prog .tab li {
-		margin-right: 1rem;
-		margin-bottom: 1rem;
+		width: calc(20% - 20px);
+		margin: 27px 10px 0;
 	}
 
 	.prog-process .prog .tab li:last-child {
@@ -2048,6 +2049,7 @@
 	}
 
 	.prog-process .prog .tab li a {
+		width: auto;
 		margin: 0;
 	}
 
@@ -2267,6 +2269,15 @@
 
 	.info-txt h3 {
 		margin: 0 0 1.6rem;
+	}
+}
+
+@media all and (max-width: 819px) {
+	/*===================================
+	정주영 창업경진대회
+	===================================*/
+	.prog-process .prog .tab li {
+		width: calc(33.3333333% - 20px);
 	}
 }
 

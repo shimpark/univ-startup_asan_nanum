@@ -2,6 +2,14 @@
 
 
 /*===================================
+공통
+===================================*/
+body {
+	overflow-x: hidden;
+}
+
+
+/*===================================
 헤더
 ===================================*/
 header.main:not(.fixed) h1 {
@@ -63,8 +71,7 @@ header.main:not(.fixed) .mobile-menu:after {
 }
 
 .main-visual .video-block video,
-.main-visual .video-block iframe,
-#mainVslYtb { /* 0224 zoe 클래스 추가 */
+.main-visual .video-block iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -177,13 +184,12 @@ header.main:not(.fixed) .mobile-menu:after {
 
 .overview-btm .process ul {
 	display: flex;
-	justify-content: space-between;
 	margin-top: 0.85rem;
-	padding: 0 2rem;
+	padding: 0 2.8985507%;
 }
 
 .overview-btm .process ul li {
-	flex: 1;
+	width: 20%;
 }
 
 .overview-btm .process ul li h3 {
@@ -207,6 +213,7 @@ header.main:not(.fixed) .mobile-menu:after {
 
 .overview-btm .process ul li p {
 	margin-top: 1.15rem;
+	padding: 0 0.5rem;
 	font-size: 0.9rem;
 	line-height: 1.55;
 }
@@ -218,7 +225,7 @@ header.main:not(.fixed) .mobile-menu:after {
 .benefit {
 	padding: 7.5rem 0 6rem;
 	background: url(../images/10th/bg-section-benefit.png) no-repeat center top;
-	font-size: 0;
+	background-size: auto 100%;
 }
 
 .benefit .bnf-top {
@@ -360,12 +367,29 @@ header.main:not(.fixed) .mobile-menu:after {
 .mentor ul {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-bottom: -0.15rem;
+	margin: 0 -1.32rem -0.15rem;
+}
+
+.mentor ul li {
+	width: calc(16.6666667% - 2.64rem);
+	margin: 0 1.32rem;
 }
 
 .mentor ul li > span {
 	display: block;
+}
+
+.mentor ul li .mnt-img {
+	position: relative;
+	padding-bottom: 100%;
+}
+
+.mentor ul li .mnt-img img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .mentor ul li .mnt-name {
@@ -398,13 +422,19 @@ header.main:not(.fixed) .mobile-menu:after {
 	.overview-top .video-link {
 		background-size: auto 100%;
 	}
+}
 
-
+@media all and (max-width: 1050px) {
 	/*===================================
-	메인(혜택)
+	메인(멘토)
 	===================================*/
-	.benefit {
-		background-size: auto 100%;
+	.mentor ul {
+		margin: -10px -10px -0.15rem;
+	}
+
+	.mentor ul li {
+		width: calc(20% - 20px);
+		margin: 10px;
 	}
 }
 
@@ -423,7 +453,40 @@ header.main:not(.fixed) .mobile-menu:after {
 	}
 }
 
+@media all and (max-width: 844px) {
+	/*===================================
+	메인(멘토)
+	===================================*/
+	.mentor ul li {
+		width: calc(25% - 20px);
+	}
+}
+
 @media all and (max-width: 767px) {
+	/*===================================
+	메인(비주얼)
+	===================================*/
+	/*
+	.main-visual .video-block {
+		padding-bottom: 79.5031055% !important;
+	}
+	*/
+
+	.main-visual .video-block {
+		padding-bottom: 129.2708333% !important;
+		background: url(../images/10th/m-main-visual.png) no-repeat;
+		background-size: cover;
+		overflow: hidden;
+	}
+
+	.main-visual .video-block .overlay,
+	.main-visual .video-block video,
+	.main-visual .video-block iframe,
+	.main-visual .grid img {
+		display: none;
+	}
+
+
 	/*===================================
 	메인(개요)
 	===================================*/
@@ -442,6 +505,85 @@ header.main:not(.fixed) .mobile-menu:after {
 	.overview-top .video-link p {
 		margin-bottom: 1rem;
 	}
+
+	.overview-btm {
+		padding-bottom: 5rem;
+	}
+
+	.overview-btm .process > img {
+		display: none;
+	}
+
+	.overview-btm .process ul {
+		flex-wrap: wrap;
+	}
+
+	.overview-btm .process ul li {
+		width: 50%;
+		padding-bottom: 1rem;
+	}
+
+	.overview-btm .process ul li h3 {
+		top: -0.45rem;
+		padding-bottom: 0.5rem;
+	}
+
+	.overview-btm .process ul li h3:before {
+		display: block;
+		position: absolute;
+		top: 0.45rem;
+		width: 12px;
+		height: 12px;
+		border-radius: 100%;
+		border: 2px solid #6abba2;
+		background-color: #6abba2;
+		box-shadow: 0 0 0 2px #e4ece9 inset;
+		content: "";
+	}
+
+	.overview-btm .process ul li h3:after {
+		transform: none;
+	}
+
+	.overview-btm .process ul li p {
+		margin-top: 0;
+		padding: 0;
+	}
+
+	.overview-btm .process ul li:nth-child(odd) {
+		margin-left: calc(50% - 2px);
+		padding-left: 20px;
+		border-left: 2px solid #6abba2;
+		text-align: left;
+	}
+
+	.overview-btm .process ul li:nth-child(odd) h3:before {
+		left: -29px;
+	}
+
+	.overview-btm .process ul li:nth-child(odd) h3:after {
+		left: 0;
+	}
+
+	.overview-btm .process ul li:nth-child(even) {
+		margin-right: calc(50% - 2px);
+		padding-right: 20px;
+		border-right: 2px solid #6abba2;
+		text-align: right;
+	}
+
+	.overview-btm .process ul li:nth-child(even) h3:before {
+		right: -29px;
+	}
+
+	.overview-btm .process ul li:nth-child(even) h3:after {
+		left: auto;
+		right: 0;
+	}
+
+	.overview-btm .process ul li:last-child {
+		border: none;
+	}
 }
 
 @media all and (max-width: 643px) {
@@ -453,17 +595,19 @@ header.main:not(.fixed) .mobile-menu:after {
 	}
 }
 
+@media all and (max-width: 638px) {
+	/*===================================
+	메인(멘토)
+	===================================*/
+	.mentor ul li {
+		width: calc(33.3333333% - 20px);
+	}
+}
+
 @media all and (max-width: 414px) {
 	/*===================================
 	메인(비주얼)
 	===================================*/
-	.main-visual .video-block {
-		padding-bottom: 129.2708333%;
-		background: url(../images/10th/m-main-visual.png) no-repeat;
-		background-size: cover;
-		overflow: hidden;
-	}
-
 	/*
 	.main-visual .video-block video {
 		left: 50%;
@@ -471,12 +615,4 @@ header.main:not(.fixed) .mobile-menu:after {
 		transform: translateX(-50%);
 	}
 	*/
-
-	.main-visual .video-block .overlay,
-	.main-visual .video-block video,
-	.main-visual .video-block iframe,
-	#mainVslYtb,
-	.main-visual .grid img { /* 0224 zoe 클래스 추가 */
-		display: none;
-	}
 }

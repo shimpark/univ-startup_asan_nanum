@@ -228,9 +228,25 @@ $(document).ready(function(){
 			$("#prg1, #prg2, #prg3, #prg4").removeClass("active");
 		});
 	}
-	
-	$("#prog").tabs();
-	
+
+	$(window).scroll(function () {
+		var windowST = $(this).scrollTop();	
+
+		// 스크롤 반응 애니메이션
+		$(".ani-area").each(function(){
+			var contST2 = $(this).offset().top;
+			if (windowST > contST2 - 720) {
+				$(this).find(".aniEl").addClass('on');
+				$(this).find(".aniEl-sq").each(function (i, el) {
+					var $this = $(this);
+					setTimeout(function(){
+						$this.addClass('on');
+					}, i * 300); // milliseconds
+				});
+			}
+		});	
+	});
+
 
 	// 스크롤 반응 액션
 	$(window).scroll(numberCountCheck);
@@ -239,6 +255,9 @@ $(document).ready(function(){
 
 	// 히스토리 대회영상
 	$("#video").tabs();
+
+	// 정주영 창업경진대회
+	$("#prog").tabs();
 
 	// 공지사항 동영상 콘텐츠 리사이징
 //	$(".ntc-view .atc-cont iframe").parent("div").css("position", "relative");
