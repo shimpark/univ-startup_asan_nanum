@@ -215,6 +215,16 @@ $(document).ready(function(){
 		});
 	}
 
+	// 홍보 영상
+	$(".open-pr-video").click(function(){
+		$(".mask").addClass("darkgreen");
+		wrapWindowByMask();
+		$(".pr-video").show();
+		$(".pr-video").css({
+			"top": GetTopPos(".pr-video") + "px"
+		});
+	});
+
 
 	// 히스토리
 	$(window).scroll(numberCountCheck);

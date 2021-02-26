@@ -553,6 +553,33 @@
 	line-height: 1.55;
 }
 
+.prog-process .prog .tab-cont .info-block li .desc {
+	font-weight: 500;
+	color: #629889
+}
+
+.prog-process .prog .tab-cont .info-block li .desc:before {
+	display: block;
+	width: 1.25rem;
+	height: 0.1rem;
+	margin-bottom: 0.7rem;
+	background-color: #629889;
+	content: "";
+}
+
+.prog-process .prog .tab-cont .info-block li .btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 7.5rem;
+	height: 2.5rem;
+	margin-top: 0.8rem;
+	padding: 0;
+	border-radius: 1.25rem;
+	line-height: 1;
+	text-align: center;
+}
+
 .program {
 	margin-bottom: -6.5rem;
 	padding: 4.7rem 0 17.5rem;
@@ -2040,11 +2067,201 @@
 	padding-top: 5rem;
 }
 
+.privacy .cont-box {
+	padding: 4rem 5.7971014%;
+	border: 1px solid #d1d8d6;
+	font-size: 0.9rem;
+	line-height: 1.55;
+}
+
+.privacy .cont-box h3 {
+	margin: 3.5rem 0 1.5rem;
+	font-size: 1rem;
+	font-weight: 700;
+	color: #183d31;
+}
+
+.privacy .cont-box h3:first-child {
+	margin-top: 0;
+}
+
+.privacy .cont-box ul.circle li {
+	margin: 0.5rem 0 0 1.15rem;
+	text-indent: -1.15rem;
+}
+
+.privacy .cont-box ul.circle li:first-child {
+	margin-top: 0;
+}
+
+.flx-tbl {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1rem 0;
+	border-top: 1px solid #d1d8d6;
+	border-left: 1px solid #d1d8d6;
+}
+
+.flx-tbl.col2 li {
+	width: 50%;
+}
+
+.flx-tbl.col3 li {
+	width: 33.3333333%;
+}
+
+.flx-tbl li {
+	padding: 0.7rem 1rem 0.75rem;
+	border-right: 1px solid #d1d8d6;
+	border-bottom: 1px solid #d1d8d6;
+}
+
+.flx-tbl li.th {
+	background-color: #e7edeb;
+	font-weight: 700;
+	color: #183d31;
+	text-align: center;
+}
+
+.flx-tbl li.tac {
+	text-align: center;
+}
+
 
 /*===================================
 아이디 찾기/비밀번호 잦기(레이어)
 ===================================*/
+.find-id .lay-top,
+.find-pw .lay-top {
+	padding-top: 3rem;
+}
 
+.find-id .lay-top .lay-close,
+.find-pw .lay-top .lay-close {
+	background-color: transparent;
+}
+
+.find-id .lay-top .lay-close span,
+.find-pw .lay-top .lay-close span {
+	background-color: #183d31;
+}
+
+.find-id .lay-top h3,
+.find-pw .lay-top h3 {
+	text-align: center;
+}
+
+.find-id .lay-top h3:after,
+.find-pw .lay-top h3:after {
+	display: block;
+	width: 1.6rem;
+	height: 1px;
+	margin: 2.2rem auto 3.5rem;
+	background-color: #183d31;
+	content: "";
+}
+
+.result p {
+	padding: 1.3rem 0;
+	font-size: 0.9rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.result p em {
+	color: #629889;
+}
+
+
+/*===================================
+홍보 영상(레이어)
+===================================*/
+.pr-video {
+	max-width: 1110px;
+	background-color: #fef8ec;
+}
+
+.pr-video .lay-top {
+	padding: 2.4rem 7.2072072% 1.2rem;
+}
+
+.pr-video .lay-top h3:before {
+	display: block;
+	width: 1.25rem;
+	height: 0.1rem;
+	margin-bottom: 0.5rem;
+	background-color: #629889;
+	content: "";
+}
+
+.pr-video .vdo-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.pr-video .vdo-info .vdo-pgn {
+	flex: none;
+	font-size: 0.9rem;
+}
+
+.pr-video .lay-mdl {
+	padding: 0 7.2072072% 3.5rem;
+}
+
+.pr-video .vdo-list {
+	position: relative;
+}
+
+.pr-video .vdo-list .img-block,
+.pr-video .vdo-list .iframe-block {
+	position: relative;
+	padding-bottom: 56.25%;
+}
+
+.pr-video .vdo-list .img-block a,
+.pr-video .vdo-list .iframe-block iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.pr-video .vdo-list .img-block a .ico {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 3.35rem;
+	transform: translate(-50%, -50%);
+}
+
+.pr-video .vdo-list .img-block a img {
+	width: 100%;
+	height: 100%;
+}
+
+.pr-video .vdo-list .owl-nav .owl-prev,
+.pr-video .vdo-list .owl-nav .owl-next {
+	position: absolute;
+	top: 50%;
+	width: 2.4210526%;
+	height: 8.0524344%;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	font-size: 0;
+	transform: translateY(-50%);
+}
+
+.pr-video .vdo-list .owl-nav .owl-prev {
+	left: -4.5263157%;
+	background-image: url(../images/10th/slider-prev2.png);
+}
+
+.pr-video .vdo-list .owl-nav .owl-next {
+	right: -4.5263157%;
+	background-image: url(../images/10th/slider-next2.png);
+}
 
 
 /*===================================
@@ -2064,6 +2281,14 @@
 		left: 1283px !important;
 		width: 37px;
 		height: 71px;
+	}
+
+
+	/*===================================
+	홍보 영상(레이어)
+	===================================*/
+	.pr-video {
+		min-height: 36.6rem;
 	}
 }
 
@@ -2760,5 +2985,14 @@
 	.faq .tab-cont p {
 		padding: 26px 20px 28px 64px;
 		background-position: 20px 20px;
+	}
+
+
+	/*===================================
+	개인정보처리방침
+	===================================*/
+	.privacy .cont-box {
+		padding: 0;
+		border: none;
 	}
 }

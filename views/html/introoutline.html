@@ -13,13 +13,23 @@
 	<meta property="og:description" content="아산나눔재단 실전형 창업 지원 프로그램">
 
 	<link rel="stylesheet" href="../../content/styles/sub.css">
+	<link rel="stylesheet" href="../../content/styles/owl.carousel.min.css">
 
 	<script src="../../content/scripts/jquery-1.12.4.min.js"></script>
 	<script src="../../content/scripts/jquery-ui-1.12.1.custom.js"></script>
+	<script src="../../content/scripts/owl.carousel.min.js"></script>
 	<script src="../../content/scripts/common.js"></script>
 	<script>
     $(document).ready(function(){
+		// 진행 프로세스
 		$("#prog").tabs();
+
+		// 홍보 영상
+		$(".vdo-list.owl-carousel").owlCarousel({
+			items: 1,
+			loop: true,
+			nav: true
+		});
 	});
     </script>
 </head>
@@ -186,6 +196,8 @@
 											대한민국 사회 전반에 기업가정신과 창업문화가 확산될 수 있도록 새로운 성장 동력을 만듭니다.<br />
 											실제 창업을 준비하거나 창업을 하고 있는 여러분에게 도움 될 수 있는 다양한 콘텐츠를 제공합니다.
 										</p>
+										<p class="desc">정주영 창업경진대회는 모집홍보 기간에 기업가정신을 확산을 위한 다양한 영상 콘텐츠를 지속 발행하고 있습니다.</p>
+										<a href="javascript:;" class="btn beige open-pr-video">영상 보기<i class="ico play"></i></a>			
 									</li>
 								</ul>
 							</div>
@@ -353,5 +365,42 @@
 		</div>
 	</footer>
 	<div class="mask"></div>
+	<!-- 홍보영상 -->
+	<div class="lay pr-video">
+		<div class="lay-top">
+			<div class="vdo-info">
+				<h3 class="vdo-tit">실리콘 밸리가 주목한 카이스트 단톡방</h3>
+				<span class="vdo-pgn">1/12</span>
+			</div>
+			<a href="javascript:;" class="lay-close">닫기<span></span><span></span></a>
+		</div>
+		<div class="lay-mdl">
+			<ul class="vdo-list owl-carousel">
+				<li>
+					<div class="img-block" style="display:none;">
+						<a href="javascript:;">
+							<span class="ico"><img src="../../content/images/10th/ico-play.png" alt="" /></span>
+							<img src="../../content/images/10th/thumb/video_img_01.png" alt="" />
+						</a>
+					</div>
+					<div class="iframe-block">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/l39coLaoSwg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</li>
+				<li>
+					<div class="img-block" style="display:none;">
+						<a href="javascript:;">
+							<span class="ico"><img src="../../content/images/10th/ico-play.png" alt="" /></span>
+							<img src="http://placehold.it/950x534" alt="" />
+						</a>
+					</div>
+					<div class="iframe-block">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/fcThnN4qpjA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div><!--// lay -->
+	<!--// 홍보영상 -->
 </body>
 </html>

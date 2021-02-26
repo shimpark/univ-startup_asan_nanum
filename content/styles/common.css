@@ -238,6 +238,13 @@ textarea {
 	background-image: url(../images/10th/ico-download.png);
 }
 
+.btn .ico.play {
+	width: 1.1rem;
+	height: 1.1rem;
+	margin-left: 0.9rem;
+	background-image: url(../images/10th/ico-play-sm.png);
+}
+
 .btn-wrap {
 	display: flex;
 	justify-content: center;
@@ -822,23 +829,28 @@ body.mobile-menu-opened header .menu-close {
 	position: relative;
 }
 
+.lay-top h3 {
+	font-size: 1.5rem;
+	color: #183d31;
+}
+
 .lay-top .lay-close {
 	display: block;
 	position: absolute;
 	top: 0;
-	right: -2rem;
-	width: 2rem;
-	height: 2rem;
-	padding: 0.95rem 0.25rem 0;
-	background-color: rgba(0, 0, 0, 0.5);
+	right: 0;
+	width: 2.2rem;
+	height: 2.2rem;
+	padding: 1.05rem 0.6rem 0;
+	background-color: #629889;
 	font-size: 0;
 }
 
 .lay-top .lay-close span {
 	display: block;
-	width: 1.5rem;
-	height: 1px;
-	background-color: #000;
+	width: 1rem;
+	height: 0.1rem;
+	background-color: rgba(254, 248, 236, 0.5);
 }
 
 .lay-top .lay-close span:first-child {
@@ -846,7 +858,7 @@ body.mobile-menu-opened header .menu-close {
 }
 
 .lay-top .lay-close span:last-child {
-	margin-top: -1px;
+	margin-top: -0.1rem;
 	transform: rotate(-45deg);
 }
 
@@ -854,13 +866,36 @@ body.mobile-menu-opened header .menu-close {
 	padding: 0 2.5rem 5rem;
 }
 
+.lay-mdl .frm-wrap {
+	padding: 0;
+	border-bottom: none;
+}
+
+.lay-mdl .frm-wrap .frm li {
+	align-items: flex-start;
+	margin-top: 0.5rem;
+}
+
 .lay-mdl .frm-wrap .frm li label,
 .lay-mdl .frm-wrap .frm li .desc {
 	font-weight: 500;
 }
 
+.lay-mdl .frm-wrap .frm li label {
+	margin-top: 0.55rem;
+	margin-right: 1.5rem;
+}
+
+.lay-mdl .frm-wrap .frm.basic li label {
+	min-width: 3.3rem;
+}
+
 .lay-mdl .frm-wrap .frm li .desc {
 	color: #629889;
+}
+
+.lay-mdl .frm-wrap .frm li .flx {
+	flex: 1;
 }
 
 .lay-mdl .btn-wrap .btn {
@@ -1219,6 +1254,15 @@ body.mobile-menu-opened header .menu-close {
 			height: 768px;
 			opacity: 0;
 		}
+	}
+}
+
+@media all and (max-width: 709px) {
+	/*===================================
+	마스크&레이어
+	===================================*/
+	.lay {
+		margin: 0 20px;
 	}
 }
 
