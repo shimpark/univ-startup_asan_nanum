@@ -470,6 +470,7 @@
 	margin: 0 auto;
 	border-radius: 1.25rem;
 	background-color: #fff;
+	font-size: 0.9rem;
 	font-weight: 700;
 	color: #183d31;
 	line-height: 2.4rem;
@@ -1269,12 +1270,12 @@
 
 .rp-mentor {
 	position: relative;
-	margin-top: 8.5rem;
+	margin-top: 7.8rem;
 }
 
 .rp-mentor .ptn-img {
 	width: 65.2173913%;
-	background-color: #e5e5eb;
+	background-color: #e7e8ec;
 	font-size: 0;
 }
 
@@ -1285,7 +1286,7 @@
 .rp-mentor .ptn-info {
 	position: absolute;
 	top: 3.5rem;
-	right: 0;
+	right: 0.8695652%;
 	width: 62.2463768%;
 	padding: 3.7rem 5rem 3.8rem;
 	background-color: #fff;
@@ -1313,9 +1314,17 @@
 	content: "";
 }
 
+.rp-mentor .ptn-info ul {
+	min-height: 7rem;
+}
+
 .rp-mentor .ptn-info ul li {
 	font-size: 0.9rem;
 	line-height: 1.55;
+}
+
+.rp-mentor.green-tone .ptn-img {
+	background-color: #e7edeb;
 }
 
 .rp-mentor.sponsor .ptn-img {
@@ -1338,6 +1347,7 @@
 
 .partner.benefit .rp-logo {
 	margin-top: 1.5rem;
+	text-align: center;
 }
 
 
@@ -1410,6 +1420,7 @@
 	font-size: 1rem;
 	color: #fff;
 	line-height: 1;
+	text-align: center;
 }
 
 .info-txt .details h4:first-child {
@@ -1803,6 +1814,15 @@
 	margin-top: 4rem;
 	padding-top: 4rem;
 	border-top: 1px solid rgba(24, 61, 49, 0.2);
+}
+
+.pre-caution.min + .bl.caution {
+	display: flex;
+	justify-content: center;
+	margin-top: 4rem;
+	padding-top: 4rem;
+	border-top: 1px solid rgba(24, 61, 49, 0.2);
+	font-size: 0.9rem;
 }
 
 
@@ -2387,6 +2407,10 @@
 		width: auto;
 		box-shadow: none;
 	}
+
+	.rp-mentor .ptn-info ul {
+		min-height: 0;
+	}
 }
 
 @media all and (max-width: 1275px) {
@@ -2491,6 +2515,10 @@
 	===================================*/
 	.info-txt .details .timeline li {
 		width: 25%;
+	}
+
+	.info-txt .details .timeline li.w2x {
+		width: 50%;
 	}
 }
 

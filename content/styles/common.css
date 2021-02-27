@@ -619,7 +619,12 @@ body.mobile-menu-opened header .menu-close {
 	padding: 2rem 0;
 }
 
+.ft-top.v1 .grid {
+	justify-content: flex-end;
+}
+
 .ft-top.v1 .sponsor {
+	display: none;
 	margin-top: 0;
 }
 
@@ -627,9 +632,11 @@ body.mobile-menu-opened header .menu-close {
 	margin-left: 1.5rem;
 }
 
+/*
 .ft-top.v1 .sns li.asan {
 	margin-right: 2rem;
 }
+*/
 
 .ft-top.v1 .sns li.asan a {
 	font-family: "Noto Sans KR", sans-serif;
