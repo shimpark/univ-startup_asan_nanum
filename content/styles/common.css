@@ -1290,9 +1290,11 @@ body.mobile-menu-opened header .menu-close {
 		justify-content: space-between;
 	}
 
+	/*
 	.ft-top.v1 .sns li.asan {
 		margin-right: 20px;
 	}
+	*/
 
 	.ft-top.v1 .sns li.subscribe {
 		flex: 1;

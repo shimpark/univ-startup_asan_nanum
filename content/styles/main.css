@@ -600,6 +600,7 @@ header.main:not(.fixed) .mobile-menu:after {
 
 	.overview-btm .process ul li:last-child {
 		border: none;
+		margin-left: 50%;
 	}
 }
 

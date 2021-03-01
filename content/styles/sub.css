@@ -1086,6 +1086,10 @@
 	background-color: #425563;
 }
 
+.summaryPlay .compet-video .tab li:last-child:before {
+	left: calc(-0.55rem + 2px);
+}
+
 .summaryPlay .compet-video .tab li a {
 	display: block;
 	position: relative;
@@ -2954,7 +2958,7 @@
 
 	.frm-wrap .frm li.flx-wr.custom1 ul:last-child li > span {
 		width: calc(100% - 6.6rem);
-	}	
+	}
 
 	.frm-wrap .frm li.phase ul.flx li label {
 		display: flex;
