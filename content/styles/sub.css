@@ -1327,6 +1327,22 @@
 	line-height: 1.55;
 }
 
+.rp-mentor .ptn-info ul.word {
+	display: none;
+}
+
+.rp-mentor .ptn-info:hover {
+	cursor: pointer;
+}
+
+.rp-mentor .ptn-info:hover ul.word {
+	display: block;
+}
+
+.rp-mentor .ptn-info:hover ul.career {
+	display: none;
+}
+
 .rp-mentor.green-tone .ptn-img {
 	background-color: #e7edeb;
 }
